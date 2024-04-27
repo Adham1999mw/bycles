@@ -1,0 +1,41 @@
+.headerContainer {
+  // background-color: red;
+  position: sticky;
+  background-color: white;
+  z-index: 1;
+  top: 0;
+  // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 12px 0;
+
+  .links {
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .activeLink {
+      width: 50%;
+      height: 2px;
+      background-color: #f50;
+      border-radius: 50px;
+    }
+
+    .notActive {
+      width: 1px;
+      height: 2px;
+      background-color: #f50;
+      border-radius: 50px;
+    }
+
+    .activeLink_container:hover {
+      .activeLink {
+        transition: 0.5s;
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}

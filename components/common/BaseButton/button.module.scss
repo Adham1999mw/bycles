@@ -1,0 +1,12 @@
+.CustomButton {
+    background-color: #f50;
+    color: white;
+    border-radius: 25px;
+    border: 1px solid #f50;
+}
+
+.CustomButton:hover {
+    background-color: white;
+    border: 1px solid #f50;
+    color: #f50;
+}
