@@ -1,14 +1,9 @@
-import path from 'path';
-
-const __dirname = path.dirname(new URL(import.meta.url).pathname);
-
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  distDir: 'out',
-  // output: "export",
-  sassOptions: {
-    includePaths: [path.join(__dirname, "styles")],
-  },
-  reactStrictMode: true,
-};
+    // distDir: 'out',
+    output: "export",
+
+    reactStrictMode: true,
+  };
 
 export default nextConfig;
