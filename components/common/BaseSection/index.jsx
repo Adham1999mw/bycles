@@ -2,9 +2,9 @@ import { Grid, Typography } from "@mui/material";
 import CustomButton from "../BaseButton";
 import styles from './BaseSection.module.scss'
 
-const BaseSection = ({ title, body, buttonTitle }) => {
+const BaseSection = ({ title, body, buttonTitle , bgColor , color }) => {
   return (
-    <Grid  justifyContent='center' container>
+    <Grid className={styles.fullwidthcontainer}  justifyContent='center' style={{background:bgColor , color:color}} container>
       <Grid
         container
         direction="column"
