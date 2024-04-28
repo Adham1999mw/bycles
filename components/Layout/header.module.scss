@@ -1,26 +1,37 @@
 .headerContainer {
-  // background-color: red;
+  background-color: #a60f0c !important;
   position: sticky;
-  background-color: white;
   z-index: 1;
   top: 0;
   // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  padding: 12px 0;
+  padding: 24px 0;
 
   width: 99.2vw !important;
   max-width: 100vw !important;
   margin: 0 calc(-50vw + 50%);
 
+  @media screen and (max-width: 768px) {
+    padding: 8px 0;
+  }
+
+  .Imglogo {
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    border-radius: 14px;
+  }
+
   .links {
     a {
       text-decoration: none;
-      color: black;
+      color: white;
+      transition: 0.5s;
     }
-
+    a:hover {
+      color: #8f6463;
+    }
     .activeLink {
       width: 50%;
       height: 2px;
-      background-color: #a60f0c;
+      background-color: white;
       border-radius: 50px;
     }
 
@@ -35,10 +46,16 @@
       .activeLink {
         transition: 0.5s;
         width: 100%;
+        background-color: #8f6463;
       }
     }
   }
 
+
+}
+
+.desktopHeader {
+  display: flex;
   @media screen and (max-width: 768px) {
     display: none;
   }

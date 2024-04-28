@@ -1,18 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Dancing+Script:wght@400..700&family=Vampiro+One&display=swap");
 p {
-    font-size: 1.7rem !important;
+  font-size: 1.7rem !important;
 
-    @media screen  and (max-width : 768px){
-        font-size: 1rem !important;
-    }
+  @media screen and (max-width: 768px) {
+    font-size: 1rem !important;
+  }
 }
 
-
 h2 {
-    @media screen  and (max-width : 768px){
-        font-size: 2.5rem !important;
-    }
+  @media screen and (max-width: 768px) {
+    font-size: 2.5rem !important;
+  }
 }
 
 body {
-    position: relative;
+  position: relative;
 }

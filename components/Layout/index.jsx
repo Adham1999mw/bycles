@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button, Container, Grid, Typography } from "@mui/material";
 import Link from "next/link";
-import bikelOGO from "@/assets/bike.svg";
+import bikelOGO from "@/assets/logo.png";
 import Image from "next/image";
 import styles from "./header.module.scss";
 import CustomButton from "../common/BaseButton";
@@ -9,8 +9,8 @@ import HeaderDrawer from "./drawer";
 
 const Header = () => {
   const [pathes, setPathes] = useState([
-    { text: "Home", active: true, link: "/" },
-    { text: "contact", active: false, link: "/" },
+    { text: "Accueil", active: true, link: "/" },
+    { text: "Présentation", active: false, link: "/presentation" },
     { text: "prices", active: false, link: "/" },
     { text: "buy", active: false, link: "/" },
   ]);
@@ -31,14 +31,15 @@ const Header = () => {
       <Container>
         <Grid
           container
-          md={12}
           justifyContent="space-between"
           alignItems="center"
+          className={styles.desktopHeader}
+          direction='row'
         >
-          <Grid>
-            <Image src={bikelOGO} width={80} height={80} />
+          <Grid item>
+            <Image className={styles.Imglogo}  src={bikelOGO} width={100} height={120} />
           </Grid>
-          <Grid flex={1}>
+          <Grid item>
             <Grid
               textAlign="center"
               className={styles.links}
@@ -46,7 +47,6 @@ const Header = () => {
               container
               direction="row"
               gap={4}
-              flex={1}
             >
               {pathes.map((link, index) => (
                 <Link
@@ -66,13 +66,14 @@ const Header = () => {
               ))}
             </Grid>
           </Grid>
-          <CustomButton text={"contact us"} />
+          <CustomButton  bgColor="white" color="#a60f0c" text={"contact us"} />
         </Grid>
 
         <HeaderDrawer data={pathes} />
       </Container>
     </Grid>
   );
+
 };
 
 export default Header;

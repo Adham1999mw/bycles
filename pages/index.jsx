@@ -8,13 +8,13 @@ const Home = () => {
   return (
     <Grid>
       <BaseSection
-        title={"Keep your fleet and business rolling"}
+        title={"L'ATELIER CYCLO PHIL"}
         body={
-          "Optimize your LEV fleet with our sustainable solutions. Maintenance. Management. Consultancy."
+          "Mécanicien cycles, je vous propose mes services pour entretenir ou réparer vos vélos. Manque de temps ou difficultés à vous déplacer je peux intervenir à domicile ou sur le lieu de votre choix dans un rayon de 25 kms autour de Saint Pathus. N'hésitez pas à me contacter"
         }
-        buttonTitle={"Our services"}
+        buttonTitle={"PRÉSENTATION"}
       />
-      <Grid style={{margin:"30px 0"}}>
+      <Grid style={{ margin: "30px 0" }}>
         <img
           width="100%"
           src="https://getbikeservice.com/wp-content/uploads/2023/06/Artboard-1-copy-4@2x-1.png"
@@ -115,7 +115,6 @@ const Home = () => {
         body={"Join our newsletter"}
         buttonTitle={"Sign-up"}
       />
-
     </Grid>
   );
 };

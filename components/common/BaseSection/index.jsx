@@ -21,7 +21,7 @@ const BaseSection = ({ title, body, buttonTitle , bgColor , color }) => {
           <Typography>{body}</Typography>
         </Grid>
         <Grid item>
-          <CustomButton text={buttonTitle} />
+          <CustomButton bgColor={color} color={bgColor} text={buttonTitle} />
         </Grid>
       </Grid>
     </Grid>

@@ -1,14 +1,21 @@
 .CustomButton {
-    background-color: #a60f0c;
-    color: white;
-    border-radius: 24px;
-    border: 1px solid #a60f0c;
-    padding: 8px 20px;
-    font-weight: bold;
+  // background-color: #a60f0c;
+  color: white;
+  border-radius: 24px;
+  border: 1px solid;
+  padding: 8px 20px;
+  font-weight: bold;
 }
 
 .CustomButton:hover {
-    background-color: white;
-    border: 1px solid #a60f0c;
-    color: #a60f0c;
+  background-color: white !important;
+  border: 1px solid;
+  color: #a60f0c !important;
+}
+
+.CustomButtonHover:hover {
+  background-color: #8f6463 !important;
+  transition: 0.5s;
+  border: 1px solid white;
+  color: white !important;
 }
