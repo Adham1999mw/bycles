@@ -99,7 +99,7 @@ const Home = () => {
           "Optimize your LEV fleet with our sustainable solutions. Maintenance. Management. Consultancy."
         }
         buttonTitle={"Our services"}
-        bgColor={"#f50"}
+        bgColor={"#a60f0c"}
         color={"white"}
       />
 

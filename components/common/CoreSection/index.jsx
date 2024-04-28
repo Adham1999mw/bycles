@@ -43,7 +43,7 @@ const CoreSection = ({ title, data, image, buttonTitle , RD }) => {
             <Grid item key={index} sx={{ marginTop: 1 }}>
               <Grid container direction="column" gap={2}>
                 <Grid item>
-                  <Typography color={"#f50"}>{ele.title}</Typography>
+                  <Typography color={"#a60f0c"}>{ele.title}</Typography>
                 </Grid>
                 <Grid item>
                   <Typography variant="span">{ele.text}</Typography>

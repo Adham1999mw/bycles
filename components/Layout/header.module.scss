@@ -7,6 +7,10 @@
   // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   padding: 12px 0;
 
+  width: 99.2vw !important;
+  max-width: 100vw !important;
+  margin: 0 calc(-50vw + 50%);
+
   .links {
     a {
       text-decoration: none;
@@ -16,14 +20,14 @@
     .activeLink {
       width: 50%;
       height: 2px;
-      background-color: #f50;
+      background-color: #a60f0c;
       border-radius: 50px;
     }
 
     .notActive {
       width: 1px;
       height: 2px;
-      background-color: #f50;
+      background-color: #a60f0c;
       border-radius: 50px;
     }
 
