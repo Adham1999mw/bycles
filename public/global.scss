@@ -15,4 +15,83 @@ h2 {
 
 body {
   position: relative;
+  overflow-x: hidden !important;
+}
+
+
+/*
+ *---------------------------------
+ * RESET INPUTS
+ *---------------------------------
+ */
+ .MuiAutocomplete-root {
+  padding: 0 !important;
+  min-width: 100% !important;
+
+  .MuiInputBase-root {
+    padding: 0;
+
+    label {
+      top: -1px;
+    }
+  }
+}
+
+.MuiTextField-root,
+.MuiInputBase-root {
+  height: 48px;
+  min-width: 100% !important;
+  border-radius:  8px !important;
+}
+
+fieldset {
+  border-radius:  8px !important;
+}
+
+
+input,
+.MuiSelect-select {
+  padding: 0 1rem !important;
+  height: 100% !important;
+  display: flex;
+  align-items: center;
+}
+
+.MuiTextField-root label {
+  line-height: inherit !important;
+  top: -3.5px !important;
+}
+
+/*
+ *---------------------------------
+ * HANDLE INPUTS FOCUSED
+ *---------------------------------
+ */
+
+.Mui-focused fieldset {
+  border-color: #8f6463 !important;
+  border-width: 1px !important;
+}
+
+label.Mui-focused {
+  color: #8f6463 !important;
+}
+
+
+.MuiFormControl-root:has(.Mui-error) {
+  height: 70px !important;
+}
+
+
+
+.MuiFormHelperText-root {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  padding: 0 10px !important; 
+  min-height: 17px !important;
+}
+
+
+.MuiFormHelperText-root {
+  font-size: 12px !important;
 }

@@ -1,7 +1,7 @@
 .headerContainer {
   background-color: #a60f0c !important;
   position: sticky;
-  z-index: 1;
+  z-index: 5555;
   top: 0;
   // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   padding: 24px 0;
@@ -55,6 +55,7 @@
 }
 
 .desktopHeader {
+  background-color: #a60f0c;
   display: flex;
   @media screen and (max-width: 768px) {
     display: none;

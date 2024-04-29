@@ -6,16 +6,25 @@ import Header from "@/components/Layout/index";
 import { Container } from "@mui/material";
 import "../public/global.scss";
 import Footer from "@/components/common/Footer";
+import { SnackbarProvider, useSnackbar } from "notistack";
 
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container>
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
-      </Container>
+      <SnackbarProvider
+        variant="error"
+        anchorOrigin={{
+          vertical: "left",
+          horizontal: "bottom",
+        }}
+      >
+        <Container>
+          <Header />
+          <Component {...pageProps} />
+          <Footer />
+        </Container>
+      </SnackbarProvider>
     </ThemeProvider>
   );
 }

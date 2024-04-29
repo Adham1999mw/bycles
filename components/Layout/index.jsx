@@ -6,6 +6,7 @@ import Image from "next/image";
 import styles from "./header.module.scss";
 import CustomButton from "../common/BaseButton";
 import HeaderDrawer from "./drawer";
+import { useRouter } from "next/router";
 
 const Header = () => {
   const [pathes, setPathes] = useState([
@@ -25,6 +26,8 @@ const Header = () => {
     });
     setPathes(updatedPathes);
   };
+
+  const router = useRouter()
 
   return (
     <Grid className={styles.headerContainer}>
@@ -66,7 +69,7 @@ const Header = () => {
               ))}
             </Grid>
           </Grid>
-          <CustomButton  bgColor="white" color="#a60f0c" text={"contact us"} />
+          <CustomButton onclick={() => router.push('./contact')}  bgColor="white" color="#a60f0c" text={"contact us"} />
         </Grid>
 
         <HeaderDrawer data={pathes} />

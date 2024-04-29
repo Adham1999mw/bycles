@@ -12,7 +12,7 @@ const Footer = () => {
       direction="column"
       justifyContent="center"
       alignItems="center"
-      gap={2}
+      gap={8}
     >
       <div item>
         <p>L'ATELIER CYCLO PHIL</p>
