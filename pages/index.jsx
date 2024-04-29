@@ -1,6 +1,13 @@
 import Partner from "@/components/Partner";
 import BaseSection from "@/components/common/BaseSection";
 import CoreSection from "@/components/common/CoreSection";
+import SchedulePicker from "@/components/common/DatePicker";
+import BasicDateCalendar from "@/components/common/DatePicker";
+import DateCalendarValue from "@/components/common/DatePicker";
+import Schedule from "@/components/common/DatePicker";
+import MyScheduler from "@/components/common/DatePicker";
+import DatePicker from "@/components/common/DatePicker";
+// import MyDatePicker from "@/components/common/DatePicker";
 import { Grid, Typography } from "@mui/material";
 import React, { ReactElement } from "react";
 
@@ -115,6 +122,8 @@ const Home = () => {
         body={"Join our newsletter"}
         buttonTitle={"Sign-up"}
       />
+
+      {/* <BasicDateCalendar />   */}
     </Grid>
   );
 };
