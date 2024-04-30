@@ -1,7 +1,7 @@
 import useValidationSchema from "@/Utilites";
 import Cookies from "js-cookie";
 import { enqueueSnackbar } from "notistack";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const UseContactHook = () => {
   const { handleSubmit, control, errors } = useValidationSchema({
