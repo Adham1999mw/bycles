@@ -4,13 +4,13 @@ import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 
 
-const useValidationSchema = ({ fields }) => {
+const UseValidationSchema = ({ fields }) => {
   
   const schema = yup.object().shape({
     ...(fields.includes('firstname') && {
       firstname: yup
         .string()
-        .trim() // Remove leading and trailing whitespaces
+        .trim()
         .required('requried')
         .min(2, 'more tham 2')
         .max(254, 'less than 254')
@@ -53,4 +53,4 @@ const useValidationSchema = ({ fields }) => {
   }
 }
 
-export default useValidationSchema
+export default UseValidationSchema

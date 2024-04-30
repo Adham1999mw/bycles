@@ -1,11 +1,11 @@
-import useValidationSchema from "@/Utilites";
 import Cookies from "js-cookie";
 // import { enqueueSnackbar } from "notistack";
 import { useState } from "react";
+import UseValidationSchema  from "@/Utilites"
 
 const useContactHook = () => {
   
-  const { handleSubmit, control, errors } = useValidationSchema({
+  const { handleSubmit, control, errors } = UseValidationSchema({
     fields: ["firstname", "email"],
   });
 
@@ -31,7 +31,6 @@ const useContactHook = () => {
             day: Cookies.get('day'),
             month:Cookies.get('month'),
             hour:Cookies.get('hour')
-            // Add other form fields as needed
           }),
         }
       );

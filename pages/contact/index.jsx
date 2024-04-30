@@ -9,7 +9,7 @@ import BasicDateCalendar from "@/components/common/DatePicker";
 import loader from "../../assets/loader.svg";
 import Image from "next/image";
 import BaseSection from "@/components/common/BaseSection";
-import useContactHook from "./hook/contactHook";
+import useContactHook from "../../hook/contactHook/hook/contactHook";
 
 const Contact = () => {
   const {
