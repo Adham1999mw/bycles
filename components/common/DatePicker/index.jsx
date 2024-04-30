@@ -6,9 +6,10 @@ import dayjs from "dayjs";
 import { DateTimePicker } from "@mui/x-date-pickers";
 import { enqueueSnackbar } from "notistack";
 import Cookies from 'js-cookie'
+import useContactHook from "@/hook/contactHook/hook/contactHook";
 
 export default function BasicDateCalendar() {
-  const [value, setValue] = useState(null); // Initialize value as null
+  const [value, setValue] = useState(null);
   const [openingHours, setOpeningHours] = useState({
     Monday: null,
     Tuesday: { start: "08:30", end: "18:30" },
@@ -19,6 +20,7 @@ export default function BasicDateCalendar() {
     Sunday: null,
   });
 
+  const { setDataFun  } = useContactHook()
 
   const isTimeDisabled = (time) => {
     if (!value) return true; // Disable all times until a date is selected
