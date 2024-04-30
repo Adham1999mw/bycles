@@ -1,6 +1,5 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import UseContactHook from "./hook/UseContactHook";
 import { Controller } from "react-hook-form";
 import BaseTextInput from "@/components/common/BaseTextField";
 import styles from "./constact.module.scss";
@@ -10,6 +9,7 @@ import BasicDateCalendar from "@/components/common/DatePicker";
 import loader from "../../assets/loader.svg";
 import Image from "next/image";
 import BaseSection from "@/components/common/BaseSection";
+import useContactHook from "./hook/contactHook";
 
 const Contact = () => {
   const {
@@ -21,7 +21,7 @@ const Contact = () => {
     handleInputChange,
     setDataFun,
     loading,
-  } = UseContactHook();
+  } = useContactHook();
 
   return (
     <Grid container justifyContent="center">

@@ -1,9 +1,9 @@
 import useValidationSchema from "@/Utilites";
 import Cookies from "js-cookie";
-import { enqueueSnackbar } from "notistack";
+// import { enqueueSnackbar } from "notistack";
 import { useState } from "react";
 
-const UseContactHook = () => {
+const useContactHook = () => {
   const { handleSubmit, control, errors } = useValidationSchema({
     fields: ["firstname", "email"],
   });
@@ -37,20 +37,20 @@ const UseContactHook = () => {
 
       if (response.ok) {
         setLoading(false)
-        enqueueSnackbar("Form submitted successfully", { variant: "success" });
+        // enqueueSnackbar("Form submitted successfully", { variant: "success" });
         Cookies.remove('day'),
         Cookies.remove('month'),
         Cookies.remove('hour')
       } else {
-        enqueueSnackbar("Failed to submit form", { variant: "error" });
+        // enqueueSnackbar("Failed to submit form", { variant: "error" });
       }
     } else {
-      return enqueueSnackbar("please select date");
+      // return enqueueSnackbar("please select date");
     }
   };
 
   const onSubmitError = () => {
-    return enqueueSnackbar("there are some wrong information");
+    // return enqueueSnackbar("there are some wrong information");
   };
 
   const handleInputChange = (field = "", obj, value) => {
@@ -74,4 +74,4 @@ const UseContactHook = () => {
   };
 };
 
-export default UseContactHook;
+export default useContactHook;
