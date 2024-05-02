@@ -30,7 +30,8 @@ const useContactHook = () => {
             description: data?.desc,
             day: Cookies.get('day'),
             month:Cookies.get('month'),
-            hour:Cookies.get('hour')
+            hour:Cookies.get('hour'),
+            minute:Cookies.get('minute')
           }),
         }
       );
@@ -41,6 +42,7 @@ const useContactHook = () => {
         Cookies.remove('day'),
         Cookies.remove('month'),
         Cookies.remove('hour')
+        Cookies.remove('minute')
         
       } else {
         enqueueSnackbar("Failed to submit form", { variant: "error" });

@@ -1,9 +1,8 @@
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
+import { DateTimePicker } from "@mui/x-date-pickers";
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";
-import { DateTimePicker } from "@mui/x-date-pickers";
 import { enqueueSnackbar } from "notistack";
 import Cookies from 'js-cookie'
 import useContactHook from "@/hook/contactHook/hook/contactHook";
@@ -40,12 +39,18 @@ export default function BasicDateCalendar() {
       .set("hour", parseInt(end.split(":")[0]))
       .set("minute", parseInt(end.split(":")[1]));
 
-    // Special cases: 09:30 and 18:00 should not be disabled
+    // Special cases: 09:45 and 17:30 should not be disabled
     if (
-      (currentTime.hour() === 9 && currentTime.minute() === 30) ||
-      (currentTime.hour() === 18 && currentTime.minute() === 0)
+      (currentTime.hour() === 9 && currentTime.minute() === 45)
     ) {
       return false;
+    }
+
+    // Prevent selection between 12:45 and 14:30
+    const lunchStartTime = dayjs().set("hour", 12).set("minute", 45);
+    const lunchEndTime = dayjs().set("hour", 14).set("minute", 30);
+    if (currentTime.isBetween(lunchStartTime, lunchEndTime, null, "[]")) {
+      return true;
     }
 
     return !currentTime.isBetween(startTime, endTime, null, "[]");
@@ -70,13 +75,12 @@ export default function BasicDateCalendar() {
           Cookies.set('day' , newValue.date())
           Cookies.set('month' , newValue.month() + 1)
           Cookies.set('hour' ,  newValue.hour())
+          Cookies.set('minute' ,   newValue.minute())
           setValue(newValue);
         }}
-        minutesStep={null}
-        hideSeconds={true}
         ampm={false}
-        maxTime={dayjs().set("hour", 18).set("minute", 0)}
-        minTime={dayjs().set("hour", 8)}
+        maxTime={dayjs().set("hour", 17).set("minute", 30)}
+        minTime={dayjs().set("hour", 9).set("minute", 45)}
         shouldDisableTime={isTimeDisabled}
       />
     </LocalizationProvider>
