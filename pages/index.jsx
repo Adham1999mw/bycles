@@ -89,16 +89,12 @@ const Home = () => {
 
       <BaseSection
         title={"Make the transition to sustainable micromobility"}
-        buttonTitle={"Become Partner"}
+        buttonTitle={"Contact Us"}
+        handleClick = { () => router.push('/contact')}
+
       />
 
       <Partner />
-
-      <BaseSection
-        title={"contact with us!"}
-        buttonTitle={"contact-us"}
-        handleClick = { () => router.push('/contact')}
-      />
 
       {/* <BasicDateCalendar />   */}
     </Grid>

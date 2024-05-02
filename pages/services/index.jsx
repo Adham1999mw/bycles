@@ -1,14 +1,14 @@
 import BaseSection from "@/components/common/BaseSection";
 import CoreSection from "@/components/common/CoreSection";
-import TableSercies from "../../components/Table";
 import one from "@/assets/one.jpeg";
 import { Grid, Typography } from "@mui/material";
 import { useState } from "react";
 import styles from "./services.module.scss";
+import { useRouter } from "next/router";
 
 const Services = () => {
   const [active, setActive] = useState("first");
-
+  const router = useRouter();
   return (
     <>
       <BaseSection
@@ -41,7 +41,10 @@ const Services = () => {
         <CoreSection
           title={"Entretiens Amortisseur"}
           image={one}
+          handleClick={() => router.push('/Rendez')}
           custom
+          buttonTitle={"Prendre rendez-vous"}
+
           data={[
             {
               title: "1-Entretien d'un amortisseur simple bonbonne",
@@ -69,6 +72,8 @@ const Services = () => {
 
       {active == "first" && (
         <CoreSection
+          buttonTitle={"Prendre rendez-vous"}
+          handleClick={() => router.push('/Rendez')}
           custom
           title={"Entretiens Fourche"}
           image={one}
