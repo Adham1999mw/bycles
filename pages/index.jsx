@@ -7,8 +7,12 @@ import React from "react";
 import one from "@/assets/one.jpeg"
 import two from "@/assets/two.jpeg"
 import three from "@/assets/three.jpeg"
+import { useRouter } from "next/router";
 
 const Home = () => {
+
+  const router = useRouter();
+
   return (
     <Grid>
       <BaseSection
@@ -91,9 +95,9 @@ const Home = () => {
       <Partner />
 
       <BaseSection
-        title={"Keep up with us!"}
-        body={"Join our newsletter"}
-        buttonTitle={"Sign-up"}
+        title={"contact with us!"}
+        buttonTitle={"contact-us"}
+        handleClick = { () => router.push('/contact')}
       />
 
       {/* <BasicDateCalendar />   */}

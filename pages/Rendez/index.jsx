@@ -30,6 +30,8 @@ const Rendez = () => {
         body={
           "Mécanicien cycles, je vous propose mes services pour entretenir ou réparer vos vélos."
         }
+        handleClick={() => window.open('/atelier.pdf' , '_blank')}
+        buttonTitle={'Fiche Atelier'}
       />
       <form
         className={`${styles.LogIn_Form} ${styles.formContainer}`}

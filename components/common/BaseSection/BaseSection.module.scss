@@ -1,8 +1,9 @@
 .max {
     max-width: 50% !important;
     z-index: 88;
+    justify-content: center !important;
     @media screen  and (max-width : 768px){
-        max-width: 90% !important;
+        max-width: 95% !important;
     }
     
 

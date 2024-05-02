@@ -28,7 +28,7 @@ function HeaderDrawer({ data }) {
       <Drawer anchor="bottom" open={open} onClose={toggleDrawer}>
         <div className={styles.Drawer_content} style={{ width: "100%" }}>
           <div>
-            <Image  onClick={() => router.push('/')} className={styles.logo} src={bike} width={60} height={60} />
+            <Image  onClick={() => router.push('/')} className={styles.logo} src={bike} width={90} height={100} />
           </div>
 
           {data.map((link, index) => (
@@ -49,7 +49,11 @@ function HeaderDrawer({ data }) {
           ))}
 
           <CustomButton
-            onclick={() => router.push("./contact")}
+            onclick={() => {
+              router.push("./contact")
+              setOpen(false);
+
+            }}
             bgColor="white"
             color="#a60f0c"
             text={"contact us"}

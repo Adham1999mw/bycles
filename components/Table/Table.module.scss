@@ -1,5 +1,5 @@
 .Table {
-    padding: 18px 24px;
+    padding: 18px 42px;
     background-color: #a60f0c;
     border-radius: 8px;
     max-width: 100%;
@@ -31,5 +31,9 @@
             display: none;
         }
 
+    }
+
+    @media screen  and (max-width : 768px){
+        padding: 18px 24px;
     }
 }

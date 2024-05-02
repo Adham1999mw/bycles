@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 import styles from './Coresection.module.scss'
 import Image from "next/image";
 
-const CoreSection = ({ title, data, image, buttonTitle, RD, id , handleClick}) => {
+const CoreSection = ({ title, data, image, buttonTitle, RD, id , handleClick , custom}) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0,
@@ -24,14 +24,15 @@ const CoreSection = ({ title, data, image, buttonTitle, RD, id , handleClick}) =
       container
       direction={RD ? "row-reverse" : "row"}
       justifyContent="space-between"
-      alignItems="center"
+      alignItems="flex-start"
       gap={4}
-      marginTop={10}
-      marginBottom={10}
+      position={'relative'}
+      className={styles.mra}
     >
-      <Grid className="animate__animated animate__slideInLeft" md={5} item>
+
+      <Grid className={`animate__animated animate__slideInUp ${custom ?  styles.custom : null}` } md={5} item>
         <animated.div ref={ref} style={props}>
-          <div className={styles.image_CONTAINER}>
+          <div className={`${styles.image_CONTAINER}`}>
             {/* <img width={"100%"} src={image} alt={title} /> */}
             <Image src={image} width={480} height={480} />
           </div>

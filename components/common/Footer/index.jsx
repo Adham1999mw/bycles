@@ -73,7 +73,7 @@ const Footer = () => {
                   onclick={() => {
                     window.open("/terms.pdf", "_blank");
                   }}
-                  text={"Terms and Conditions"}
+                  text={"Conditions Générales de Vente"}
                   bgColor="white"
                   color="#a60f0c"
                 />
