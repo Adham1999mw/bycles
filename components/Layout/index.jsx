@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { Button, Container, Grid, Typography } from "@mui/material";
+import { useState } from "react";
+import { Container, Grid, Typography } from "@mui/material";
 import Link from "next/link";
 import bikelOGO from "@/assets/logo.png";
 import Image from "next/image";
@@ -12,8 +12,8 @@ const Header = () => {
   const [pathes, setPathes] = useState([
     { text: "Accueil", active: true, link: "/" },
     { text: "Présentation", active: false, link: "/presentation" },
-    { text: "prices", active: false, link: "/" },
-    { text: "buy", active: false, link: "/" },
+    { text: "Nos Services", active: false, link: "/services" },
+    { text: "Rendez-vous", active: false, link: "/Rendez" },
   ]);
 
   const handleLinkClick = (index) => {
@@ -40,7 +40,7 @@ const Header = () => {
           direction='row'
         >
           <Grid item>
-            <Image className={styles.Imglogo}  src={bikelOGO} width={100} height={120} />
+            <Image onClick={() => router.push('/')} className={styles.Imglogo}  src={bikelOGO} width={100} height={120} />
           </Grid>
           <Grid item>
             <Grid

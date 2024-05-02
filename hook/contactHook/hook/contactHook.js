@@ -1,12 +1,12 @@
 import Cookies from "js-cookie";
-// import { enqueueSnackbar } from "notistack";
+import { enqueueSnackbar } from "notistack";
 import { useState } from "react";
 import UseValidationSchema  from "@/Utilites"
 
 const useContactHook = () => {
   
   const { handleSubmit, control, errors } = UseValidationSchema({
-    fields: ["firstname", "email"],
+    fields: ["firstname", "email" , 'phone'],
   });
 
   const [data, setData] = useState();
@@ -37,16 +37,47 @@ const useContactHook = () => {
 
       if (response.ok) {
         setLoading(false)
-        // enqueueSnackbar("Form submitted successfully", { variant: "success" });
+        enqueueSnackbar("Form submitted successfully", { variant: "success" });
         Cookies.remove('day'),
         Cookies.remove('month'),
         Cookies.remove('hour')
+        
       } else {
-        // enqueueSnackbar("Failed to submit form", { variant: "error" });
+        enqueueSnackbar("Failed to submit form", { variant: "error" });
       }
     } else {
-      // return enqueueSnackbar("please select date");
+      return enqueueSnackbar("please select date");
     }
+  };
+
+  const onSubmitContact = async () => {
+    if (data ) {
+      setLoading(true)
+      const response = await fetch(
+        "https://formsubmit.co/ajax/adhamelmalawany@gmail.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: data.name,
+            email: data.email,
+            phone:data.phone,
+            Object : data?.objectInput,
+            description: data?.desc,
+          }),
+        }
+      );
+
+      if (response.ok) {
+        setLoading(false)
+        enqueueSnackbar("Form submitted successfully", { variant: "success" });
+        
+      } else {
+        enqueueSnackbar("Failed to submit form", { variant: "error" });
+      }
+    } 
   };
 
   const onSubmitError = () => {
@@ -70,7 +101,8 @@ const useContactHook = () => {
     onSubmitError,
     handleInputChange,
     setDataFun,
-    loading
+    loading,
+    onSubmitContact
   };
 };
 

@@ -3,6 +3,7 @@ import styles from "./Footer.module.scss";
 import insta from "@/assets/insta.svg";
 import face from "@/assets/face.svg";
 import Image from "next/image";
+import CustomButton from "@/components/common/BaseButton";
 
 const Footer = () => {
   return (
@@ -14,12 +15,17 @@ const Footer = () => {
       alignItems="center"
       gap={8}
     >
-      <div item>
+      <div item className={styles.title}>
         <p>L'ATELIER CYCLO PHIL</p>
       </div>
       <Grid item flex={1} width={"60%"}>
-        <Grid container gap={2} justifyContent="space-between" textAlign={'center'}>
-          <Grid md={4}  xs={12} item>
+        <Grid
+          container
+          gap={2}
+          justifyContent="space-between"
+          textAlign={"center"}
+        >
+          <Grid md={4} xs={12} item>
             <Typography component="div" variant="span">
               Lundi : Fermé{" "}
             </Typography>
@@ -47,7 +53,7 @@ const Footer = () => {
           </Grid>
 
           <div className={styles.lineresponsive}></div>
-          <Grid md={4} xs={12} item  gap={1} container>
+          <Grid md={4} xs={12} item gap={1} container>
             <Grid>
               <Typography variant="span" component="div">
                 tel : +33 (0)7 68 82 81 84
@@ -58,26 +64,40 @@ const Footer = () => {
               <Typography component="div" variant="span">
                 Email : lateliercyclophil@gmail.com
               </Typography>
+              <Typography component="div" variant="span">
+                Address : 2 rue de la république 95270 CHAUMONTEL
+              </Typography>
+
+              <Grid className={styles.aLink} style={{ marginTop: 20 }}>
+                <CustomButton
+                  onclick={() => {
+                    window.open("/terms.pdf", "_blank");
+                  }}
+                  text={"Terms and Conditions"}
+                  bgColor="white"
+                  color="#a60f0c"
+                />
+              </Grid>
+            </Grid>
+          </Grid>
+
+          <Grid container className={styles.social} gap={1}>
+            <Grid item>
+              <a
+                href="https://www.facebook.com/lateliercyclophil"
+                target="_blank"
+              >
+                <Image src={face} width={35} height={35} />
+              </a>
             </Grid>
 
-            <Grid container className={styles.social} gap={1}>
-              <Grid item>
-                <a
-                  href="https://www.facebook.com/lateliercyclophil"
-                  target="_blank"
-                >
-                  <Image src={face} width={35} height={35} />
-                </a>
-              </Grid>
-
-              <Grid item>
-                <a
-                  href="https://www.instagram.com/lateliercyclophil/?hl=fr"
-                  target="_blank"
-                >
-                  <Image src={insta} width={35} height={35} />
-                </a>
-              </Grid>
+            <Grid item>
+              <a
+                href="https://www.instagram.com/phildothis/?igsh=MWoza2huMjMzaTdpNA%3D%3D"
+                target="_blank"
+              >
+                <Image src={insta} width={35} height={35} />
+              </a>
             </Grid>
           </Grid>
         </Grid>

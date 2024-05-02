@@ -3,8 +3,10 @@ import CustomButton from "../BaseButton";
 import "animate.css/animate.min.css";
 import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
+import styles from './Coresection.module.scss'
+import Image from "next/image";
 
-const CoreSection = ({ title, data, image, buttonTitle , RD }) => {
+const CoreSection = ({ title, data, image, buttonTitle, RD, id , handleClick}) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0,
@@ -18,16 +20,21 @@ const CoreSection = ({ title, data, image, buttonTitle , RD }) => {
 
   return (
     <Grid
+      id={id}
       container
-      direction={RD ? 'row-reverse' : 'row'}
+      direction={RD ? "row-reverse" : "row"}
       justifyContent="space-between"
       alignItems="center"
       gap={4}
+      marginTop={10}
       marginBottom={10}
     >
       <Grid className="animate__animated animate__slideInLeft" md={5} item>
         <animated.div ref={ref} style={props}>
-          <img width={"100%"} src={image} alt={title} />
+          <div className={styles.image_CONTAINER}>
+            {/* <img width={"100%"} src={image} alt={title} /> */}
+            <Image src={image} width={480} height={480} />
+          </div>
         </animated.div>
       </Grid>
 
@@ -52,9 +59,11 @@ const CoreSection = ({ title, data, image, buttonTitle , RD }) => {
             </Grid>
           ))}
 
-          <Grid>
-            <CustomButton text={buttonTitle} />
-          </Grid>
+          {buttonTitle && (
+            <Grid>
+              <CustomButton onclick={handleClick} text={buttonTitle} />
+            </Grid>
+          )}
         </Grid>
       </Grid>
     </Grid>

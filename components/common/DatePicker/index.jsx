@@ -54,7 +54,7 @@ export default function BasicDateCalendar() {
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <DateTimePicker
-        label="Controlled picker"
+        label="date picker"
         value={value}
         onError={(err) => {
           if (err == "minTime") {

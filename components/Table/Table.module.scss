@@ -1,0 +1,35 @@
+.Table {
+    padding: 18px 24px;
+    background-color: #a60f0c;
+    border-radius: 8px;
+    max-width: 100%;
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    p {
+        margin-bottom: 8px;
+        font-size: 20px !important;
+
+        @media screen  and (max-width : 768px){
+           font-size: 10px !important;
+        }
+    }
+
+    .baseP {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .line {
+        display: flex;
+        justify-content: center;
+        flex: 1;
+
+        @media screen  and (max-width : 768px){
+            display: none;
+        }
+
+    }
+}

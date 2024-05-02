@@ -6,9 +6,12 @@ import { Typography } from "@mui/material";
 import BurgerMenu from "@/assets/burger.svg";
 import bike from "@/assets/logo.png";
 import Image from "next/image";
+import CustomButton from "@/components/common/BaseButton";
+import { useRouter } from "next/router";
 
 function HeaderDrawer({ data }) {
   const [open, setOpen] = useState(false);
+  const router = useRouter()
 
   const toggleDrawer = () => {
     setOpen(!open);
@@ -19,13 +22,13 @@ function HeaderDrawer({ data }) {
   return (
     <div className={styles.Drawer}>
       <div className={styles.Drawer_header}>
-        <Image className={styles.logo} src={bike} width={60} height={80} />
+        <Image onClick={() => router.push('/')}  className={styles.logo} src={bike} width={60} height={80} />
         <Image onClick={toggleDrawer} src={BurgerMenu} width={40} height={40} />
       </div>
       <Drawer anchor="bottom" open={open} onClose={toggleDrawer}>
-        <div className={styles.Drawer_content} style={{ width: '100%' }}>
+        <div className={styles.Drawer_content} style={{ width: "100%" }}>
           <div>
-            <Image className={styles.logo} src={bike} width={60} height={60} />
+            <Image  onClick={() => router.push('/')} className={styles.logo} src={bike} width={60} height={60} />
           </div>
 
           {data.map((link, index) => (
@@ -44,6 +47,13 @@ function HeaderDrawer({ data }) {
               <div className={link.active ? styles.activeLink : null}></div>
             </Link>
           ))}
+
+          <CustomButton
+            onclick={() => router.push("./contact")}
+            bgColor="white"
+            color="#a60f0c"
+            text={"contact us"}
+          />
         </div>
       </Drawer>
     </div>

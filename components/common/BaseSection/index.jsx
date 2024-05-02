@@ -2,10 +2,10 @@ import { Grid, Typography } from "@mui/material";
 import CustomButton from "../BaseButton";
 import styles from "./BaseSection.module.scss";
 
-const BaseSection = ({ title, body, buttonTitle, bgColor, color }) => {
+const BaseSection = ({ title, body, buttonTitle, bgColor, color , bgImg , handleClick }) => {
   return (
     <Grid
-      className={styles.fullwidthcontainer}
+      className={`${styles.fullwidthcontainer } ${bgImg ? styles.imgSPE : ""}`}
       justifyContent="center"
       style={{ background: bgColor, color: color }}
       container
@@ -29,7 +29,7 @@ const BaseSection = ({ title, body, buttonTitle, bgColor, color }) => {
         </Grid>
         {buttonTitle && (
           <Grid item>
-            <CustomButton bgColor={color} color={bgColor} text={buttonTitle} />
+            <CustomButton onclick={handleClick} bgColor={color} color={bgColor} text={buttonTitle} />
           </Grid>
         )}
       </Grid>
