@@ -2,7 +2,7 @@
     max-width: 50% !important;
     z-index: 88;
     @media screen  and (max-width : 768px){
-        max-width: 100% !important;
+        max-width: 90% !important;
     }
     
 
@@ -12,14 +12,19 @@
     background-image: url('../../../assets/three.jpeg');
     background-repeat: no-repeat ;
     background-size: cover;
-    background-attachment: fixed; /* Add this line */
+    background-attachment: fixed;
     position: relative;
     height: 77vh;
+
+    @media screen  and (max-width : 768px){
+        background-size: unset;
+        height: 42vh;
+    }
 }
 
 .fullwidthcontainer {
 
-    width: 99.2vw !important;
+    width: 100vw !important;
     max-width: 100vw !important;
     margin: 0 calc(-50vw + 50%);
     padding: 2px 24px 24px 24px;

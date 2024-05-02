@@ -145,6 +145,15 @@ const Contact = () => {
         </Grid>
       </form>
 
+      <div className={styles.line}></div>
+
+      <BaseSection
+        title={"Address"}
+        body={
+          "2 rue de la république 95270 CHAUMONTEL"
+        }
+      />
+
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.0169761105712!2d31.12873221105567!3d29.978942121566952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145845030fe6fc6d%3A0x73111684bd1dce03!2sPyramids%20of%20Giza!5e0!3m2!1sen!2seg!4v1714611957853!5m2!1sen!2seg" width="100%" height="450" style={{border : 0 , marginBottom:'32px' , borderRadius:"24px"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </Grid>
   );
