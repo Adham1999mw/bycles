@@ -25,9 +25,9 @@ const Contact = () => {
   return (
     <Grid container justifyContent="center">
       <BaseSection
-        title={"Contact With Us"}
+        title={"Une question?"}
         body={
-          "Mécanicien cycles, je vous propose mes services pour entretenir ou réparer vos vélos."
+          "Envoyez nous un message pour toute information complémentaire."
         }
       />
       <form
@@ -146,7 +146,7 @@ const Contact = () => {
       <div className={styles.line}></div>
 
       <BaseSection
-        title={"Address"}
+        title={"Où nous trouver"}
         body={
           "2 rue de la république 95270 CHAUMONTEL"
         }

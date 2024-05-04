@@ -27,7 +27,7 @@ const Footer = () => {
         >
           <Grid md={4} xs={12} item>
             <Typography component="div" variant="span">
-              Lundi : Fermé{" "}
+              Lundi : 10h00 - 18h00 ( À Saint-Pathus){" "}
             </Typography>
             <Typography component="div" variant="span">
               Mardi : 9h30 - 18h30
@@ -56,16 +56,19 @@ const Footer = () => {
           <Grid md={4} xs={12} item gap={1} container>
             <Grid>
               <Typography variant="span" component="div">
-                tel : +33 (0)7 68 82 81 84
+                Tél. Portable : +33 (0)7 68 82 81 84
               </Typography>
               <Typography component="div" variant="span">
-                tel : +33 (0)9 75 46 29 35
+                Atelier Chaumontel : 01 34 68 52 13
+              </Typography>
+              <Typography component="div" variant="span">
+                Atelier Saint-Pathus : 09 75 46 29 35{" "}
               </Typography>
               <Typography component="div" variant="span">
                 Email : lateliercyclophil@gmail.com
               </Typography>
               <Typography component="div" variant="span">
-                Address : 2 rue de la république 95270 CHAUMONTEL
+                adresse : 2 rue de la république 95270 CHAUMONTEL
               </Typography>
 
               <Grid className={styles.aLink} style={{ marginTop: 20 }}>

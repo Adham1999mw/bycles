@@ -18,7 +18,7 @@ const Home = () => {
       <BaseSection
         title={"L'ATELIER CYCLO PHIL"}
         body={
-          "Mécanicien cycles, je vous propose mes services pour entretenir ou réparer vos vélos. Manque de temps ou difficultés à vous déplacer je peux intervenir à domicile ou sur le lieu de votre choix dans un rayon de 25 kms autour de Saint Pathus. N'hésitez pas à me contacter"
+          "Votre mécanicien cycles et vendeur de vélos multi-marques sur Chaumontel I really like what I'm seeing"
         }
         color={'white'}
         bgImg
@@ -89,9 +89,8 @@ const Home = () => {
 
       <BaseSection
         title={"Make the transition to sustainable micromobility"}
-        buttonTitle={"Contact Us"}
+        buttonTitle={"Contactez Nous"}
         handleClick = { () => router.push('/contact')}
-
       />
 
       <Partner />

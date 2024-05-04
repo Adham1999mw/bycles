@@ -56,7 +56,7 @@ function HeaderDrawer({ data }) {
             }}
             bgColor="white"
             color="#a60f0c"
-            text={"contact us"}
+            text={"Contactez Nous"}
           />
         </div>
       </Drawer>

@@ -1,15 +1,14 @@
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { DateTimePicker } from "@mui/x-date-pickers";
-import { useEffect, useState } from "react";
+import { StaticDateTimePicker, DateTimePickerTabs } from "@mui/x-date-pickers";
+import { Box } from "@mui/material";
+import { useState } from "react";
 import dayjs from "dayjs";
-import { enqueueSnackbar } from "notistack";
-import Cookies from 'js-cookie'
-import useContactHook from "@/hook/contactHook/hook/contactHook";
+import Cookies from "js-cookie";
 
 export default function BasicDateCalendar() {
-  const [value, setValue] = useState(null);
-  const [openingHours, setOpeningHours] = useState({
+  const [value, setValue] = useState(dayjs());
+  const [openingHours] = useState({
     Monday: null,
     Tuesday: { start: "08:30", end: "18:30" },
     Wednesday: { start: "08:30", end: "18:30" },
@@ -19,8 +18,19 @@ export default function BasicDateCalendar() {
     Sunday: null,
   });
 
-  const { setDataFun  } = useContactHook()
+  const shouldDisableDateTime = (date) => {
+    const dayOfWeek = date.day();
+    return dayOfWeek === 1 || dayOfWeek === 0;
+  };
 
+  function CustomTabs(props) {
+    return (
+      <>
+        <DateTimePickerTabs {...props} />
+        <Box sx={{ backgroundColor: "blueviolet", height: 5 }} />
+      </>
+    );
+  }
   const isTimeDisabled = (time) => {
     if (!value) return true; // Disable all times until a date is selected
     const day = value.day();
@@ -40,9 +50,7 @@ export default function BasicDateCalendar() {
       .set("minute", parseInt(end.split(":")[1]));
 
     // Special cases: 09:45 and 17:30 should not be disabled
-    if (
-      (currentTime.hour() === 9 && currentTime.minute() === 45)
-    ) {
+    if (currentTime.hour() === 9 && currentTime.minute() === 45) {
       return false;
     }
 
@@ -56,32 +64,26 @@ export default function BasicDateCalendar() {
     return !currentTime.isBetween(startTime, endTime, null, "[]");
   };
 
+  const CustomToolbar = () => null;
+
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <DateTimePicker
-        label="date picker"
+      <StaticDateTimePicker
         value={value}
-        onError={(err) => {
-          if (err == "minTime") {
-            return enqueueSnackbar("please select from available hours", {
-              variant: "warning",
-            });
-          } else if (err == "shouldDisableTime-hours") {
-            setDataFun({ dateKey: null });
-            return enqueueSnackbar("monday and saterday is holiday");
-          }
-        }}
         onChange={(newValue) => {
-          Cookies.set('day' , newValue.date())
-          Cookies.set('month' , newValue.month() + 1)
-          Cookies.set('hour' ,  newValue.hour())
-          Cookies.set('minute' ,   newValue.minute())
+          Cookies.set("day", newValue.date());
+          Cookies.set("month", newValue.month() + 1);
+          Cookies.set("hour", newValue.hour());
+          Cookies.set("minute", newValue.minute());
           setValue(newValue);
         }}
+        shouldDisableDate={shouldDisableDateTime}
+        shouldDisableTime={isTimeDisabled}
+         
+        slots={{ tabs: CustomTabs, actionBar: CustomToolbar }}
         ampm={false}
         maxTime={dayjs().set("hour", 17).set("minute", 30)}
         minTime={dayjs().set("hour", 9).set("minute", 45)}
-        shouldDisableTime={isTimeDisabled}
       />
     </LocalizationProvider>
   );

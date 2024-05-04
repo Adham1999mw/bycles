@@ -96,3 +96,16 @@ label.Mui-focused {
 .MuiFormHelperText-root {
   font-size: 12px !important;
 }
+
+.MuiBox-root {
+  background-color: white;
+
+}
+
+.MuiClockNumber-root.Mui-disabled {
+  color: rgba(255, 0, 0, 0.162);
+}
+
+.MuiClockNumber-root  {
+  font-weight: 500;
+}

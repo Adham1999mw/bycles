@@ -14,6 +14,7 @@ const Header = () => {
     { text: "Présentation", active: false, link: "/presentation" },
     { text: "Nos Services", active: false, link: "/services" },
     { text: "Rendez-vous", active: false, link: "/Rendez" },
+    { text: "Display", active: false, link: "/prices" },
   ]);
 
   const handleLinkClick = (index) => {
@@ -69,7 +70,7 @@ const Header = () => {
               ))}
             </Grid>
           </Grid>
-          <CustomButton onclick={() => router.push('./contact')}  bgColor="white" color="#a60f0c" text={"contact us"} />
+          <CustomButton onclick={() => router.push('./contact')}  bgColor="white" color="#a60f0c" text={"Contactez Nous"} />
         </Grid>
 
         <HeaderDrawer data={pathes} />

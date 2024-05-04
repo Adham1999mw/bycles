@@ -14,7 +14,7 @@ const Services = () => {
       <BaseSection
         title={"Nos services"}
         body={
-          "Mécanicien cycles, je vous propose mes services pour entretenir ou réparer vos vélos. Manque de temps ou difficultés à vous déplacer je peux intervenir à domicile ou sur le lieu de votre choix dans un rayon de 25 kms autour de Saint Pathus. N'hésitez pas à me contacter"
+          "Retrouvez ici toutes les prestations concernant l'entretien de vous amortisseurs et votre fourche."
         }
       />
 
@@ -33,6 +33,20 @@ const Services = () => {
         >
           Entretiens Amortisseur
         </Typography>
+        <Typography
+          onClick={() => setActive("three")}
+          className={active == "three" ? styles.active : null}
+          variant="h4"
+        >
+          three
+        </Typography>
+        <Typography
+          onClick={() => setActive("four")}
+          className={active == "four" ? styles.active : null}
+          variant="h4"
+        >
+          four
+        </Typography>
       </div>
 
       {/* <TableSercies /> */}
@@ -41,10 +55,9 @@ const Services = () => {
         <CoreSection
           title={"Entretiens Amortisseur"}
           image={one}
-          handleClick={() => router.push('/Rendez')}
+          handleClick={() => router.push("/Rendez")}
           custom
           buttonTitle={"Prendre rendez-vous"}
-
           data={[
             {
               title: "1-Entretien d'un amortisseur simple bonbonne",
@@ -73,7 +86,143 @@ const Services = () => {
       {active == "first" && (
         <CoreSection
           buttonTitle={"Prendre rendez-vous"}
-          handleClick={() => router.push('/Rendez')}
+          handleClick={() => router.push("/Rendez")}
+          custom
+          title={"Entretiens Fourche"}
+          image={one}
+          data={[
+            {
+              title: "1- ​Entretien d'une fourche - Diamètre 30",
+              text: "price : 131 €",
+            },
+            {
+              title: "2- Entretien d'une fourche - Diamètre 32",
+              text: "price : 138 €",
+            },
+            {
+              title: "3- Entretien d’une fourche - Diamètre 32 TALAS",
+              text: "price : 141 €",
+            },
+            {
+              title: "4- Entretien d’une fourche - Diamètre 34",
+              text: "price : 143 €",
+            },
+            {
+              title: "5- Entretien d’une fourche - Diamètre 34 TALAS",
+              text: "price : 158 €",
+            },
+            {
+              title: "6- Entretien d'une fourche Rock Shox - Diamètre 35",
+              text: "price : 151  €",
+            },
+            {
+              title: "7- Entretien d'une fourche Cane Creek - Diamètre 35",
+              text: "price : 156 €",
+            },
+            {
+              title: "8- Entretien d'une fourche - Diamètre 36",
+              text: "price : 154 €",
+            },
+            {
+              title: "9- Entretien d'une fourche - Diamètre 36 TALAS",
+              text: "price : 164 €",
+            },
+            {
+              title: "10- Entretien d'une fourche - Diamètre 38",
+              text: "price : 157 €",
+            },
+            {
+              title: "11- Entretien d'une fourche - Diamètre 40",
+              text: "price : 164 €",
+            },
+            {
+              title: "12- Entretien d'une fourche Brain",
+              text: "price : 141 €",
+            },
+            {
+              title: "13- Entretien d'une fourche BOXXER double T",
+              text: "price : 152 €",
+            },
+            {
+              title: "14- Entretien d'une fourche RS1",
+              text: "price : 143 €",
+            },
+          ]}
+        />
+      )}
+
+      {active == "three" && (
+        <CoreSection
+          buttonTitle={"Prendre rendez-vous"}
+          handleClick={() => router.push("/Rendez")}
+          custom
+          title={"Entretiens Fourche"}
+          image={one}
+          data={[
+            {
+              title: "1- ​Entretien d'une fourche - Diamètre 30",
+              text: "price : 131 €",
+            },
+            {
+              title: "2- Entretien d'une fourche - Diamètre 32",
+              text: "price : 138 €",
+            },
+            {
+              title: "3- Entretien d’une fourche - Diamètre 32 TALAS",
+              text: "price : 141 €",
+            },
+            {
+              title: "4- Entretien d’une fourche - Diamètre 34",
+              text: "price : 143 €",
+            },
+            {
+              title: "5- Entretien d’une fourche - Diamètre 34 TALAS",
+              text: "price : 158 €",
+            },
+            {
+              title: "6- Entretien d'une fourche Rock Shox - Diamètre 35",
+              text: "price : 151  €",
+            },
+            {
+              title: "7- Entretien d'une fourche Cane Creek - Diamètre 35",
+              text: "price : 156 €",
+            },
+            {
+              title: "8- Entretien d'une fourche - Diamètre 36",
+              text: "price : 154 €",
+            },
+            {
+              title: "9- Entretien d'une fourche - Diamètre 36 TALAS",
+              text: "price : 164 €",
+            },
+            {
+              title: "10- Entretien d'une fourche - Diamètre 38",
+              text: "price : 157 €",
+            },
+            {
+              title: "11- Entretien d'une fourche - Diamètre 40",
+              text: "price : 164 €",
+            },
+            {
+              title: "12- Entretien d'une fourche Brain",
+              text: "price : 141 €",
+            },
+            {
+              title: "13- Entretien d'une fourche BOXXER double T",
+              text: "price : 152 €",
+            },
+            {
+              title: "14- Entretien d'une fourche RS1",
+              text: "price : 143 €",
+            },
+          ]}
+        />
+      )}
+
+      {active == "four" && (
+        <CoreSection
+          buttonTitle={"Prendre rendez-vous"}
+          handleClick={() => router.push("/Rendez")}
           custom
           title={"Entretiens Fourche"}
           image={one}
