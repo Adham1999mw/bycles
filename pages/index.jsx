@@ -22,6 +22,7 @@ const Home = () => {
         }
         color={'white'}
         bgImg
+        mxSIZE={50}
       />
 
       <CoreSection
