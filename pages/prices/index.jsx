@@ -8,6 +8,8 @@ const Prices = () => {
       <BaseSection
         title={"Display"}
         body={"Envoyez nous un message pour toute information complémentaire."}
+        mxSIZE={50}
+
       />
       <CoreSection
         title={"Maximize uptime of your vehicles"}

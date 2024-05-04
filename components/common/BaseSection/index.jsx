@@ -10,7 +10,8 @@ const BaseSection = ({
   color,
   bgImg,
   handleClick,
-  stylesCustom
+  stylesCustom,
+  mxSIZE
 }) => {
 
   const createMarkup = (html) => {
@@ -32,6 +33,7 @@ const BaseSection = ({
         gap={2}
         textAlign="center"
         className={styles.max}
+        style={mxSIZE && {maxWidth:`${mxSIZE}%`}}
       >
         <Grid item style={stylesCustom}>
           <Typography variant="h2" style={{ fontWeight: "bold" }}>

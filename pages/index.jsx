@@ -85,6 +85,7 @@ const Home = () => {
         buttonTitle={"Our services"}
         bgColor={"#a60f0c"}
         color={"white"}
+        mxSIZE={50}
       />
 
       <BaseSection

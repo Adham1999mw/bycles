@@ -17,6 +17,8 @@ const Services = () => {
         body={
           "Retrouvez ici toutes les prestations concernant l'entretien de vous amortisseurs et votre fourche."
         }
+        mxSIZE={50}
+
       />
 
       {/* <TableSercies /> */}
