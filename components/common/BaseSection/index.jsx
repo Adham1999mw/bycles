@@ -10,7 +10,13 @@ const BaseSection = ({
   color,
   bgImg,
   handleClick,
+  stylesCustom
 }) => {
+
+  const createMarkup = (html) => {
+    return { __html: html.replace(/<br\s*\/?>/g, "<br>") };
+  };
+
   return (
     <Grid
       className={`${styles.fullwidthcontainer} ${bgImg ? styles.imgSPE : ""}`}
@@ -27,15 +33,15 @@ const BaseSection = ({
         textAlign="center"
         className={styles.max}
       >
-        <Grid item>
+        <Grid item style={stylesCustom}>
           <Typography variant="h2" style={{ fontWeight: "bold" }}>
             {title}
           </Typography>
         </Grid>
 
         {body && (
-          <Grid item>
-            <Typography>{body}</Typography>
+          <Grid item style={stylesCustom}>
+            <Typography dangerouslySetInnerHTML={createMarkup(body)} />
           </Grid>
         )}
 

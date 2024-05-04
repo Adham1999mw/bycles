@@ -9,7 +9,7 @@ import Cookies from "js-cookie";
 export default function BasicDateCalendar() {
   const [value, setValue] = useState(dayjs());
   const [openingHours] = useState({
-    Monday: null,
+    Monday: { start: "10:00", end: "18:00" },
     Tuesday: { start: "08:30", end: "18:30" },
     Wednesday: { start: "08:30", end: "18:30" },
     Thursday: { start: "08:30", end: "18:30" },
@@ -20,7 +20,7 @@ export default function BasicDateCalendar() {
 
   const shouldDisableDateTime = (date) => {
     const dayOfWeek = date.day();
-    return dayOfWeek === 1 || dayOfWeek === 0;
+    return  dayOfWeek === 0;
   };
 
   function CustomTabs(props) {

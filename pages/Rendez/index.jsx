@@ -41,6 +41,7 @@ const Rendez = () => {
         color={"white"}
         handleClick={() => window.open("/atelier.pdf", "_blank")}
         buttonTitle={"Fiche Atelier"}
+        stylesCustom={{textAlign : 'start'}}
       />
 
       <form

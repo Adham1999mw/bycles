@@ -5,6 +5,7 @@ import { Grid, Typography } from "@mui/material";
 import { useState } from "react";
 import styles from "./services.module.scss";
 import { useRouter } from "next/router";
+import TableSercies from "@/components/Table";
 
 const Services = () => {
   const [active, setActive] = useState("first");
@@ -17,6 +18,8 @@ const Services = () => {
           "Retrouvez ici toutes les prestations concernant l'entretien de vous amortisseurs et votre fourche."
         }
       />
+
+      {/* <TableSercies /> */}
 
       <div className={styles.selection}>
         <Typography
