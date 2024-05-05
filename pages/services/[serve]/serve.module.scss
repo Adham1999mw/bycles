@@ -1,0 +1,13 @@
+.back {
+  h5 {
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  img {
+    @media screen and (max-width: 768px) {
+        width: 40px;
+      }
+  }
+}
