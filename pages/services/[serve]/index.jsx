@@ -3,7 +3,8 @@ import { useRouter } from "next/router";
 import Table from "@/components/Table";
 import BaseSection from "@/components/common/BaseSection";
 import back from "@/assets/vack.svg"
-import Image from "next/Image"
+import Image from "next/image";
+
 const Serve = () => {
   const router = useRouter();
 
