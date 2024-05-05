@@ -6,6 +6,7 @@ import { useState } from "react";
 import styles from "./services.module.scss";
 import { useRouter } from "next/router";
 import TableSercies from "@/components/Table";
+import BaseCard from "@/components/common/BaseCard";
 
 const Services = () => {
   const [active, setActive] = useState("first");
@@ -18,12 +19,11 @@ const Services = () => {
           "Retrouvez ici toutes les prestations concernant l'entretien de vous amortisseurs et votre fourche."
         }
         mxSIZE={50}
-
       />
 
       {/* <TableSercies /> */}
 
-      <div className={styles.selection}>
+      {/* <div className={styles.selection}>
         <Typography
           onClick={() => setActive("first")}
           className={active == "first" ? styles.active : null}
@@ -52,11 +52,64 @@ const Services = () => {
         >
           four
         </Typography>
-      </div>
+      </div> */}
+
+      <Grid container justifyContent="center">
+        <Grid container justifyContent="center" className={styles.banner}>
+          <Typography variant="h4">
+            Entretiens, réparations & préparations
+          </Typography>
+        </Grid>
+      </Grid>
+
+      <Grid
+        className={styles.cards}
+        container
+        justifyContent="center"
+        spacing={2}
+      >
+        <Grid item xs={6} md={3}>
+          <BaseCard
+            handleClick={() => router.push("/services/fourche")}
+            body={
+              "Retrouvez ici toutes les prestations concernant l'entretien de votre fourche."
+            }
+            title={"Fourche"}
+          />
+        </Grid>
+
+        <Grid item xs={6} md={3}>
+          <BaseCard
+            handleClick={() => router.push("/services/fourche")}
+            body={
+              "Retrouvez ici toutes les prestations concernant l'entretien de votre fourche."
+            }
+            title={"Fourche"}
+          />
+        </Grid>
+        <Grid item xs={6} md={3}>
+          <BaseCard
+            handleClick={() => router.push("/services/amortisseur")}
+            body={
+              "Retrouvez ici toutes les prestations concernant l'entretien de vos amortisseurs."
+            }
+            title={"Amortisseur"}
+          />
+        </Grid>
+        <Grid item xs={6} md={3}>
+          <BaseCard
+            handleClick={() => router.push("/services/fourche")}
+            body={
+              "Retrouvez ici toutes les prestations concernant l'entretien de votre fourche."
+            }
+            title={"Fourche"}
+          />
+        </Grid>
+      </Grid>
 
       {/* <TableSercies /> */}
 
-      {active == "second" && (
+      {/* {active == "second" && (
         <CoreSection
           title={"Entretiens Amortisseur"}
           image={one}
@@ -290,7 +343,7 @@ const Services = () => {
             },
           ]}
         />
-      )}
+      )} */}
     </>
   );
 };

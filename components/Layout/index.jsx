@@ -70,7 +70,7 @@ const Header = () => {
               ))}
             </Grid>
           </Grid>
-          <CustomButton onclick={() => router.push('./contact')}  bgColor="white" color="#a60f0c" text={"Contactez Nous"} />
+          <CustomButton onclick={() => router.push('/contact')}  bgColor="white" color="#a60f0c" text={"Contactez Nous"} />
         </Grid>
 
         <HeaderDrawer data={pathes} />
