@@ -1,8 +1,11 @@
 import { Grid } from "@mui/material";
 import styles from "./Table.module.scss";
 import CustomButton from "@/components/common/BaseButton";
+import { useRouter } from "next/router";
 
 const TableSercies = ({ data }) => {
+
+  const router = useRouter()
   return (
     <Grid className={styles.Table}>
       {data.map((ele) => {
