@@ -47,11 +47,11 @@ const Serve = () => {
   const titleDATA = {
     fourche: {
       title: "Fourche",
-      body: "Retrouvez ici toutes les prestations concernant l'entretien de vous amortisseurs et votre fourche.",
+      body: "Retrouvez ici toutes les prestations concernant l'entretien de votre fourche.",
     },
     amortisseur: {
-      title: "Amortisseur",
-      body: "Retrouvez ici toutes les prestations concernant l'entretien de vous amortisseurs et votre Amortisseur .",
+      title: "Amortisseurs",
+      body: "Retrouvez ici toutes les prestations concernant l'entretien de vos amortisseurs.",
     },
   };
 

@@ -16,7 +16,7 @@ const Services = () => {
       <BaseSection
         title={"Nos services"}
         body={
-          "Retrouvez ici toutes les prestations concernant l'entretien de vous amortisseurs et votre fourche."
+          "Retrouvez ici toutes les prestations concernant l'entretien de votre vélo, amortisseurs et de votre fourche."
         }
         mxSIZE={50}
       />
@@ -93,7 +93,7 @@ const Services = () => {
             body={
               "Retrouvez ici toutes les prestations concernant l'entretien de vos amortisseurs."
             }
-            title={"Amortisseur"}
+            title={"Amortisseurs"}
           />
         </Grid>
         <Grid item xs={6} md={3}>
