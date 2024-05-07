@@ -84,7 +84,7 @@ const Services = () => {
             body={
               "Retrouvez ici toutes les prestations concernant l'entretien de votre prestations."
             }
-            title={"Prestations"}
+            title={"Détails des Prestations"}
           />
         </Grid>
         <Grid item xs={6} md={3}>

@@ -28,22 +28,24 @@ const Rendez = () => {
       <BaseSection
         title={"Rendez-vous"}
         body={
-          "Toutes les prestations d'entretiens, de réparations ou de préparations de suspensions MTB seront réalisées dans notre atelier de Chaumontel. Avant toute dépose de suspensions ou avant tout envoi via transporteur, merci de vous assurer des disponibilités de l'atelier. Grâce à cela, nous pourrons effectuer les prestations dans les meilleurs délais. Aucune prestation ne sera effectuée sur place.Merci de votre compréhension."
+          "Toutes les prestations d'entretiens, de réparations ou de préparations de suspensions MTB seront réalisées dans notre atelier de Chaumontel. Avant toute dépose de suspensions ou avant tout envoi via transporteur, merci de vous assurer des disponibilités de l'atelier. Grâce à cela, nous pourrons effectuer les prestations dans les meilleurs délais. Aucune prestation ne sera effectuée sur place. Merci de votre compréhension."
         }
       />
 
       <BaseSection
-        title={"Procedure de prise en charge atelier"}
+        title={"Procédure d'envoi en Atelier"}
         body={
-          "1-S'assurer de la disponibilité de l'atelier en nous contact, par email, parté- léphone ou via le formulaire de contact ci-dessous. \<br>\ 2-Remplir la fiche atelier et la joindre à vos colis suspensions. <br> 3-Envoyer le colis à l'adresse indiquée sur la fiche atelier."
+          "1-S'assurer de la disponibilité de l'atelier en nous contact, par email, parté- léphone ou via le formulaire de contact ci-dessous. <br> 2-Remplir la fiche atelier et la joindre à vos colis suspensions. <br> 3-Envoyer le colis à l'adresse indiquée sur la fiche atelier."
         }
         bgColor={"#a60f0c"}
         color={"white"}
         handleClick={() => window.open("/atelier.pdf", "_blank")}
         buttonTitle={"Fiche Atelier"}
-        stylesCustom={{textAlign : 'start'}}
+        stylesCustom={{ textAlign: "start" }}
       />
-
+      <BaseSection
+        title={"Demande de Rendez vous"}
+      />
       <form
         className={`${styles.LogIn_Form} ${styles.formContainer}`}
         onSubmit={handleSubmit(onSubmit, onSubmitError)}

@@ -18,7 +18,7 @@ const Home = () => {
       <BaseSection
         title={"L'ATELIER CYCLO PHIL"}
         body={
-          "Votre mécanicien cycles et vendeur de vélos multi-marques sur Chaumontel I really like what I'm seeing."
+          "Votre mécanicien cycles et vendeur de vélos multi-marques sur Chaumontel."
         }
         color={'white'}
         bgImg

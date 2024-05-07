@@ -48,13 +48,13 @@ const Serve = () => {
     fourche: [
       {
         title: "Fourche",
-        body: "Retrouvez ici toutes les prestations concernant l'entretien de votre fourche.",
+        body: "Retrouvez ici le tarif concernant l'entretien de votre fourche.",
       },
     ],
     amortisseur: [
       {
         title: "Amortisseurs",
-        body: "Retrouvez ici toutes les prestations concernant l'entretien de vos amortisseurs.",
+        body: "Retrouvez ici le tarif concernant l'entretien de votre amortisseur.",
       },
     ],
 
@@ -66,7 +66,7 @@ const Serve = () => {
     ],
     prestations: [
       {
-        title: "Prestations",
+        title: "Détails des Prestations",
         body: "Retrouvez ici toutes les prestations concernant l'entretien de vos prestations.",
       },
     ],
@@ -168,7 +168,7 @@ const Serve = () => {
           },
           { text: "Les prix ne comprennent pas les frais d'expéditions." },
         ],
-        bgColor: "#282828",
+        bgColor: "#e05e74",
       },
       {
         title: {
@@ -253,7 +253,7 @@ const Serve = () => {
           },
           { text: "Les prix ne comprennent pas les frais d'expéditions." },
         ],
-        bgColor: "#282828",
+        bgColor: "#e05e74",
       },
       {
         title: {
@@ -316,7 +316,7 @@ const Serve = () => {
           },
           { text: "Les prix ne comprennent pas les frais d'expéditions." },
         ],
-        bgColor: "#282828",
+        bgColor: "#e05e74",
       },
     ],
   };

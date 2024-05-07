@@ -35,7 +35,7 @@ const BaseSection = ({
         className={styles.max}
         style={mxSIZE && {maxWidth:`${mxSIZE}%`}}
       >
-        <Grid item style={stylesCustom}>
+        <Grid item>
           <Typography variant="h2" style={{ fontWeight: "bold" }}>
             {title}
           </Typography>
