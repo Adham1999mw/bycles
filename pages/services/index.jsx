@@ -70,21 +70,21 @@ const Services = () => {
       >
         <Grid item xs={6} md={3}>
           <BaseCard
-            handleClick={() => router.push("/services/fourche")}
+            handleClick={() => router.push("/services/forfaits")}
             body={
-              "Retrouvez ici toutes les prestations concernant l'entretien de votre fourche."
+              "Retrouvez ici toutes les prestations concernant l'entretien de votre forfaits."
             }
-            title={"Fourche"}
+            title={"Forfaits"}
           />
         </Grid>
 
         <Grid item xs={6} md={3}>
           <BaseCard
-            handleClick={() => router.push("/services/fourche")}
+            handleClick={() => router.push("/services/prestations")}
             body={
-              "Retrouvez ici toutes les prestations concernant l'entretien de votre fourche."
+              "Retrouvez ici toutes les prestations concernant l'entretien de votre prestations."
             }
-            title={"Fourche"}
+            title={"Prestations"}
           />
         </Grid>
         <Grid item xs={6} md={3}>

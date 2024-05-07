@@ -1,7 +1,7 @@
 .Table {
     padding: 18px 42px;
     background-color: #a60f0c;
-    border-radius: 8px;
+    // border-radius: 8px;
     max-width: 100%;
     a {
         text-decoration: none;
@@ -14,6 +14,13 @@
         @media screen  and (max-width : 768px){
            font-size: 12px !important;
         }
+    }
+
+    div {
+        color: white;
+        font-size: 20px !important;
+        color: white;
+        // margin-bottom: 8px;
     }
 
     .baseP {
@@ -32,7 +39,22 @@
         }
 
     }
+    .lastDiv {
+        margin-top: 25px;
+        font-size: 14px !important;
+        margin-top: 18px;
+        div {
+            margin-bottom: 0 !important;
+        }
+    }
 
+    .bodycus {
+        font-size: 14px;
+        margin-top: 25px ;
+        div {
+            margin-bottom: 0;
+        }
+    }
     @media screen  and (max-width : 768px){
         padding: 18px 24px;
     }
