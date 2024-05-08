@@ -4,7 +4,7 @@ import Image from "next/image";
 import one from "../../../assets/one.jpeg";
 import CustomButton from "../BaseButton";
 
-const BaseCard = ({ title, body , handleClick }) => {
+const BaseCard = ({ title, body, handleClick, price }) => {
   return (
     <Grid
       item
@@ -39,7 +39,13 @@ const BaseCard = ({ title, body , handleClick }) => {
           justifyContent="flex-end"
           className={styles.buttoncus}
         >
-          <CustomButton onclick={handleClick} text={"details"} />
+          {price ? (
+            <Typography color={"#a60f0c"} variant="h5">
+              {price}
+            </Typography>
+          ) : (
+            <CustomButton onclick={handleClick} text={"details"} />
+          )}
         </Grid>
       </Grid>
     </Grid>
