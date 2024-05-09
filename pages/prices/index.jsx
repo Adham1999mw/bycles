@@ -1,7 +1,7 @@
 import BaseSection from "@/components/common/BaseSection";
 import { Grid } from "@mui/material";
 import BaseCard from "@/components/common/BaseCard";
-import AllData from "./data";
+import AllData from "../../hook/data";
 
 const Prices = () => {
 
