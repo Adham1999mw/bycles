@@ -78,7 +78,7 @@ const Home = () => {
         ]}
       />
 
-      <BaseSection
+      {/* <BaseSection
         title={"Keep your fleet and business rolling"}
         body={
           "Optimize your LEV fleet with our sustainable solutions. Maintenance. Management. Consultancy."
@@ -87,13 +87,13 @@ const Home = () => {
         bgColor={"#a60f0c"}
         color={"white"}
         mxSIZE={50}
-      />
+      /> */}
 
-      <BaseSection
+      {/* <BaseSection
         title={"Make the transition to sustainable micromobility"}
         buttonTitle={"Contactez Nous"}
         handleClick = { () => router.push('/contact')}
-      />
+      /> */}
 
       <Partner />
 

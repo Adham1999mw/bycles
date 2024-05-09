@@ -1,11 +1,12 @@
-import CoreSection from "@/components/common/CoreSection";
 import BaseSection from "@/components/common/BaseSection";
-import one from "@/assets/one.jpeg";
-import { Grid, Typography } from "@mui/material";
-import data from "./data.json";
+import { Grid } from "@mui/material";
 import BaseCard from "@/components/common/BaseCard";
+import AllData from "./data";
 
 const Prices = () => {
+
+  const { data } = AllData();
+
   return (
     <>
       <BaseSection
@@ -15,13 +16,14 @@ const Prices = () => {
       />
 
       <Grid spacing={2} container md={12}>
-        {data.data.map((product) => {
+        {data.map((product) => {
           return (
             <Grid item md={3} xs={6}>
               <BaseCard
                 title={product.text}
                 body={product.body}
                 price={product.price}
+                productImg={product.productImg}
               />
             </Grid>
           );

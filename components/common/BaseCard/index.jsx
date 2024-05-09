@@ -4,7 +4,7 @@ import Image from "next/image";
 import one from "../../../assets/one.jpeg";
 import CustomButton from "../BaseButton";
 
-const BaseCard = ({ title, body, handleClick, price }) => {
+const BaseCard = ({ title, body, handleClick, price  , productImg }) => {
   return (
     <Grid
       item
@@ -14,12 +14,9 @@ const BaseCard = ({ title, body, handleClick, price }) => {
       className={styles.contaienr}
     >
       <Grid className={styles.Image_contaienr}>
-        <img
-          src={
-            "https://static.wixstatic.com/media/fa3c54_23814654685b4b3da81cb33f29ed34ee~mv2.jpg/v1/crop/x_0,y_0,w_4896,h_3616/fill/w_383,h_283,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Tof-Bike-Services-articles%20(9).jpg"
-          }
-          alt=""
-        />
+
+        <Image src={productImg} width={276} height={204}  />
+
       </Grid>
       <Grid className={styles.Title}>
         <Typography variant="h5">{title}</Typography>
@@ -44,7 +41,7 @@ const BaseCard = ({ title, body, handleClick, price }) => {
               {price}
             </Typography>
           ) : (
-            <CustomButton onclick={handleClick} text={"details"} />
+            <CustomButton onclick={handleClick} text={"En savoir plus"} />
           )}
         </Grid>
       </Grid>

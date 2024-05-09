@@ -7,6 +7,7 @@ import styles from "./services.module.scss";
 import { useRouter } from "next/router";
 import TableSercies from "@/components/Table";
 import BaseCard from "@/components/common/BaseCard";
+import ownerTwo from '@/assets/ownerTwo.jpg'
 
 const Services = () => {
   const [active, setActive] = useState("first");
@@ -16,7 +17,7 @@ const Services = () => {
       <BaseSection
         title={"Nos services"}
         body={
-          "Retrouvez ici toutes les prestations concernant l'entretien de votre vélo, amortisseurs et de votre fourche."
+          "Retrouvez ici toutes les prestations concernant l'entretien de votre vélo, amortisseur et de votre fourche."
         }
         mxSIZE={50}
       />
@@ -71,10 +72,11 @@ const Services = () => {
         <Grid item xs={6} md={3}>
           <BaseCard
             handleClick={() => router.push("/services/forfaits")}
-            body={
+            body  ={
               "Retrouvez ici toutes les prestations concernant l'entretien de votre forfaits."
             }
             title={"Forfaits"}
+            productImg={ownerTwo}
           />
         </Grid>
 
@@ -85,15 +87,19 @@ const Services = () => {
               "Retrouvez ici toutes les prestations concernant l'entretien de votre prestations."
             }
             title={"Détails des Prestations"}
+            productImg={ownerTwo}
+
           />
         </Grid>
         <Grid item xs={6} md={3}>
           <BaseCard
             handleClick={() => router.push("/services/amortisseur")}
             body={
-              "Retrouvez ici toutes les prestations concernant l'entretien de vos amortisseurs."
+              "Retrouvez ici toutes les prestations concernant l'entretien de vos amortisseur."
             }
             title={"Amortisseurs"}
+            productImg={ownerTwo}
+
           />
         </Grid>
         <Grid item xs={6} md={3}>
@@ -103,6 +109,8 @@ const Services = () => {
               "Retrouvez ici toutes les prestations concernant l'entretien de votre fourche."
             }
             title={"Fourche"}
+            productImg={ownerTwo}
+
           />
         </Grid>
       </Grid>

@@ -14,7 +14,7 @@ const Header = () => {
     { text: "Présentation", active: false, link: "/presentation" },
     { text: "Nos Services", active: false, link: "/services" },
     { text: "Rendez-vous", active: false, link: "/Rendez" },
-    { text: "Display", active: false, link: "/prices" },
+    { text: "Nos Vélos", active: false, link: "/prices" },
   ]);
 
   const handleLinkClick = (index) => {

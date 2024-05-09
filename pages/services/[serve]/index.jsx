@@ -61,13 +61,13 @@ const Serve = () => {
     forfaits: [
       {
         title: "Forfaits",
-        body: "Retrouvez ici toutes les prestations concernant l'entretien de vos forfaits.",
+        body: "Retrouvez ici les tarifs des différents forfaits d'entretien de votre vélo.",
       },
     ],
     prestations: [
       {
         title: "Détails des Prestations",
-        body: "Retrouvez ici toutes les prestations concernant l'entretien de vos prestations.",
+        body: "Retrouvez ici les differentes prestations d'entretien ou de réparation de votre vélo.",
       },
     ],
   };
