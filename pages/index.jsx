@@ -3,7 +3,7 @@ import BaseSection from "@/components/common/BaseSection";
 import CoreSection from "@/components/common/CoreSection";
 import { Grid } from "@mui/material";
 import React from "react";
-
+import secThree from "@/assets/secThree.jpeg"
 import one from "@/assets/one.jpeg"
 import two from "@/assets/two.jpeg"
 import three from "@/assets/three.jpeg"
@@ -26,55 +26,60 @@ const Home = () => {
       />
 
       <CoreSection
-        title={"Maximize uptime of your vehicles"}
-        buttonTitle={"Read more"}
+        title={"Entretien / Réparation"}
+        buttonTitle={"Nos Services"}
+        handleClick={() => router.push('./services')}
         image={
           one
         }
         data={[
           {
-            title: "Repair and maintenance",
+            title: "Entretien / Réparation",
             text: "Our automotive-grade repair and maintenance service ensures that your vehicles remain in top condition, minimizing downtime and maximizing productivity.",
           },
           {
-            title: "Repair and maintenance",
+            title: "Entretien / Réparation",
             text: "Our automotive-grade repair and maintenance service ensures that your vehicles remain in top condition, minimizing downtime and maximizing productivity.",
-          },
+          }
         ]}
       />
       <CoreSection
         RD
-        title={"Maximize uptime of your vehicles"}
-        buttonTitle={"Read more"}
+        title={"Vente de vélos"}
+        buttonTitle={"Nos Vélos"}
+        handleClick={() => router.push('./prices')}
+
         image={
           two
         }
         data={[
           {
-            title: "Repair and maintenance",
-            text: "Our automotive-grade repair and maintenance service ensures that your vehicles remain in top condition, minimizing downtime and maximizing productivity.",
+            title: "Vente de vélos",
+            text : "Envie d'un nouveau vélo? Retrouvez ici nos vélos neufs et d'occasions."
           },
           {
-            title: "Repair and maintenance",
-            text: "Our automotive-grade repair and maintenance service ensures that your vehicles remain in top condition, minimizing downtime and maximizing productivity.",
-          },
+            title: "Vente de vélos",
+            text : "Envie d'un nouveau vélo? Retrouvez ici nos vélos neufs et d'occasions."
+          }
         ]}
       />
       <CoreSection
-        title={"Maximize uptime of your vehicles"}
-        buttonTitle={"Read more"}
+        title={"Électrification"}
+        buttonTitle={"Contactez-nous"}
+        handleClick={() => router.push('./contact')}
+
         image={
-          three
+          secThree
         }
         data={[
           {
-            title: "Repair and maintenance",
-            text: "Our automotive-grade repair and maintenance service ensures that your vehicles remain in top condition, minimizing downtime and maximizing productivity.",
+            title: "Électrification",
+            text : "Transformation de votre vélo en VAE avec la marque ANNAD."
           },
           {
-            title: "Repair and maintenance",
-            text: "Our automotive-grade repair and maintenance service ensures that your vehicles remain in top condition, minimizing downtime and maximizing productivity.",
-          },
+            title: "Électrification",
+            text : "Transformation de votre vélo en VAE avec la marque ANNAD."
+          }
         ]}
       />
 
