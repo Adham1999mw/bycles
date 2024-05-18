@@ -40,8 +40,8 @@ const Header = () => {
           className={styles.desktopHeader}
           direction='row'
         >
-          <Grid item>
-            <Image onClick={() => router.push('/')} className={styles.Imglogo}  src={bikelOGO} width={100} height={120} />
+          <Grid item className={styles.Imglogo_container}>
+            <Image onClick={() => router.push('/')} className={styles.Imglogo}  src={bikelOGO} />
           </Grid>
           <Grid item>
             <Grid

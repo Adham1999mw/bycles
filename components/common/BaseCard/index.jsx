@@ -4,7 +4,7 @@ import Image from "next/image";
 import one from "../../../assets/one.jpeg";
 import CustomButton from "../BaseButton";
 
-const BaseCard = ({ title, body, handleClick, price  , productImg }) => {
+const BaseCard = ({ title, body, handleClick, price  , productImg , className }) => {
   return (
     <Grid
       item
@@ -13,7 +13,7 @@ const BaseCard = ({ title, body, handleClick, price  , productImg }) => {
       direction="column"
       className={styles.contaienr}
     >
-      <Grid className={styles.Image_contaienr}>
+      <Grid className={`${styles.Image_contaienr} ${className == "spe" ? styles.minHeight :null}`}>
 
         <Image src={productImg} width={276} height={204}  />
 

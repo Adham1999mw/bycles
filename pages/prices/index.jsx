@@ -24,6 +24,7 @@ const Prices = () => {
                 body={product.body}
                 price={product.price}
                 productImg={product.productImg}
+                className={product.className}
               />
             </Grid>
           );

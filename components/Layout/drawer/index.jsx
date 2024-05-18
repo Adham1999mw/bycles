@@ -22,14 +22,12 @@ function HeaderDrawer({ data }) {
   return (
     <div className={styles.Drawer}>
       <div className={styles.Drawer_header}>
-        <Image onClick={() => router.push('/')}  className={styles.logo} src={bike} width={60} height={80} />
+        <Image onClick={() => router.push('/')}  className={styles.logo} src={bike} />
         <Image onClick={toggleDrawer} src={BurgerMenu} width={40} height={40} />
       </div>
       <Drawer anchor="bottom" open={open} onClose={toggleDrawer}>
         <div className={styles.Drawer_content} style={{ width: "100%" }}>
-          <div>
-            <Image  onClick={() => router.push('/')} className={styles.logo} src={bike} width={90} height={100} />
-          </div>
+            <Image  onClick={() => router.push('/')} className={styles.logo} src={bike} />
 
           {data.map((link, index) => (
             <Link

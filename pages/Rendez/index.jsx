@@ -35,7 +35,7 @@ const Rendez = () => {
       <BaseSection
         title={"Procédure d'envoi en Atelier"}
         body={
-          "1-S'assurer de la disponibilité de l'atelier en nous contact, par email, parté- léphone ou via le formulaire de contact ci-dessous. <br> 2-Remplir la fiche atelier et la joindre à vos colis suspensions. <br> 3-Envoyer le colis à l'adresse indiquée sur la fiche atelier."
+          "1-S'assurer de la disponibilité de l'atelier en nous contactant par email, par téléphone ou via le formulaire de contact ci-dessous. <br> 2-Remplir la fiche atelier et la joindre à vos colis suspensions. <br> 3-Envoyer le colis à l'adresse indiquée sur la fiche atelier."
         }
         bgColor={"#a60f0c"}
         color={"white"}

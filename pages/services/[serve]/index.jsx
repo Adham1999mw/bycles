@@ -223,9 +223,6 @@ const Serve = () => {
           },
         ],
         lsDiv: [
-          {
-            text: "Les prix ne comprennent pas les frais de démontage de la fourche et de l'amortisseur du vélo.",
-          },
           { text: "Les prix ne comprennent pas les frais d'expéditions." },
         ],
       },
@@ -248,9 +245,6 @@ const Serve = () => {
           { text: "Montage de frein avec passage interne", price: "55 €​" },
         ],
         lsDiv: [
-          {
-            text: "Les prix ne comprennent pas les frais de démontage de la fourche et de l'amortisseur du vélo.",
-          },
           { text: "Les prix ne comprennent pas les frais d'expéditions." },
         ],
         bgColor: "#e05e74",
@@ -282,9 +276,6 @@ const Serve = () => {
           { text: "Changement du boitier de pédalier", price: "36 €​" },
         ],
         lsDiv: [
-          {
-            text: "Les prix ne comprennent pas les frais de démontage de la fourche et de l'amortisseur du vélo.",
-          },
           { text: "Les prix ne comprennent pas les frais d'expéditions." },
         ],
       },
@@ -311,9 +302,6 @@ const Serve = () => {
           },
         ],
         lsDiv: [
-          {
-            text: "Les prix ne comprennent pas les frais de démontage de la fourche et de l'amortisseur du vélo.",
-          },
           { text: "Les prix ne comprennent pas les frais d'expéditions." },
         ],
         bgColor: "#e05e74",
