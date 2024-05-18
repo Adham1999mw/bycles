@@ -8,6 +8,9 @@ import { useRouter } from "next/router";
 import TableSercies from "@/components/Table";
 import BaseCard from "@/components/common/BaseCard";
 import ownerTwo from '@/assets/ownerTwo.jpg'
+import servOne from "@/assets/servone.jpeg"
+import sevrThree from "@/assets/sevrThree.png"
+import servTwo from "@/assets/servTwo.jpeg"
 
 const Services = () => {
   const [active, setActive] = useState("first");
@@ -73,10 +76,10 @@ const Services = () => {
           <BaseCard
             handleClick={() => router.push("/services/forfaits")}
             body  ={
-              "Retrouvez ici toutes les prestations concernant l'entretien de votre forfaits."
+              "Retrouvez ici les tarifs des différents forfaits d'entretien de votre vélo."
             }
             title={"Forfaits"}
-            productImg={ownerTwo}
+            productImg={servOne}
           />
         </Grid>
 
@@ -84,10 +87,10 @@ const Services = () => {
           <BaseCard
             handleClick={() => router.push("/services/prestations")}
             body={
-              "Retrouvez ici toutes les prestations concernant l'entretien de votre prestations."
+              "Retrouvez ici les differentes prestations d'entretien ou de réparation de votre vélo."
             }
             title={"Détails des Prestations"}
-            productImg={ownerTwo}
+            productImg={servTwo}
 
           />
         </Grid>
@@ -95,10 +98,10 @@ const Services = () => {
           <BaseCard
             handleClick={() => router.push("/services/amortisseur")}
             body={
-              "Retrouvez ici toutes les prestations concernant l'entretien de vos amortisseur."
+              "Retrouvez ici toutes les prestations concernant l'entretien de votre amortisseur."
             }
-            title={"Amortisseurs"}
-            productImg={ownerTwo}
+            title={"Amortisseur"}
+            productImg={sevrThree}
 
           />
         </Grid>

@@ -8,6 +8,7 @@ import one from "@/assets/one.jpeg"
 import two from "@/assets/two.jpeg"
 import three from "@/assets/three.jpeg"
 import { useRouter } from "next/router";
+import ownerTwo from '@/assets/ownerTwo.jpg'
 
 const Home = () => {
 
@@ -30,7 +31,7 @@ const Home = () => {
         buttonTitle={"Nos Services"}
         handleClick={() => router.push('./services')}
         image={
-          one
+          ownerTwo
         }
         data={[
           {
