@@ -54,7 +54,7 @@ const Footer = () => {
 
           <div className={styles.lineresponsive}></div>
           <Grid md={4} xs={12} item gap={1} container>
-            <Grid>
+            <Grid style={{textAlign:'start'}}>
               <Typography variant="span" component="div">
                 Tél. Portable : +33 (0)7 68 82 81 84
               </Typography>
@@ -67,8 +67,16 @@ const Footer = () => {
               <Typography component="div" variant="span">
                 Email : lateliercyclophil@gmail.com
               </Typography>
+
+              <Typography style={{marginTop:'15px'}}  component="div" variant="span">
+                Adresse :  
+              </Typography>
+
               <Typography component="div" variant="span">
-                adresse : 2 rue de la république 95270 CHAUMONTEL
+                Atelier Chaumontel : 2 rue de la république 95270
+              </Typography>
+              <Typography component="div" variant="span">
+                Atelier Saint Pathus : 24 rue Saint Antoine 77178
               </Typography>
 
               <Grid className={styles.aLink} style={{ marginTop: 20 }}>

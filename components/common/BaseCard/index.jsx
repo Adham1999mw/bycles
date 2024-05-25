@@ -36,6 +36,7 @@ const BaseCard = ({ title, body, handleClick, price  , productImg , className })
           justifyContent="flex-end"
           className={styles.buttoncus}
         >
+          <div style={{marginTop:"8px"}}>
           {price ? (
             <Typography color={"#a60f0c"} variant="h5">
               {price}
@@ -43,6 +44,8 @@ const BaseCard = ({ title, body, handleClick, price  , productImg , className })
           ) : (
             <CustomButton onclick={handleClick} text={"En savoir plus"} />
           )}
+          </div>
+
         </Grid>
       </Grid>
     </Grid>

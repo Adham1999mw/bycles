@@ -24,7 +24,7 @@ const CoreSection = ({ title, data, image, buttonTitle, RD, id , handleClick , c
       container
       direction={RD ? "row-reverse" : "row"}
       justifyContent="space-between"
-      alignItems="flex-start"
+      alignItems="center"
       gap={4}
       position={'relative'}
       className={styles.mra}
@@ -42,7 +42,7 @@ const CoreSection = ({ title, data, image, buttonTitle, RD, id , handleClick , c
       <Grid item md={6}>
         <Grid container direction="column" gap={3}>
           <Grid item>
-            <Typography variant="h3" style={{ fontWeight: "bold" }}>
+            <Typography className={styles.title}  variant="h3" style={{ fontWeight: "bold"}}>
               {title}
             </Typography>
           </Grid>

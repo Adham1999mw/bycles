@@ -19,3 +19,9 @@
   border: 1px solid white;
   color: white !important;
 }
+
+@media screen and (max-width: 768px) {
+  .CustomButton {
+    font-size: 12px;
+  }
+}

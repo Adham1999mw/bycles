@@ -4,9 +4,7 @@ import CoreSection from "@/components/common/CoreSection";
 import { Grid } from "@mui/material";
 import React from "react";
 import secThree from "@/assets/secThree.jpeg"
-import one from "@/assets/one.jpeg"
 import two from "@/assets/two.jpeg"
-import three from "@/assets/three.jpeg"
 import { useRouter } from "next/router";
 import ownerTwo from '@/assets/ownerTwo.jpg'
 
@@ -19,7 +17,7 @@ const Home = () => {
       <BaseSection
         title={"L'ATELIER CYCLO PHIL"}
         body={
-          "Votre mécanicien et vendeur de vélos multi-marques sur Chaumontel."
+          "Votre mécanicien et vendeur de vélos multi-marques sur Chaumontel et Saint Pathus."
         }
         color={'white'}
         bgImg
@@ -36,12 +34,12 @@ const Home = () => {
         data={[
           {
             title: "Entretien / Réparation",
-            text: "Our automotive-grade repair and maintenance service ensures that your vehicles remain in top condition, minimizing downtime and maximizing productivity.",
+            text: "Plusieurs services sont proposés selon vos besoins.",
           },
-          {
-            title: "Entretien / Réparation",
-            text: "Our automotive-grade repair and maintenance service ensures that your vehicles remain in top condition, minimizing downtime and maximizing productivity.",
-          }
+          // {
+          //   title: "Entretien / Réparation",
+          //   text: "Our automotive-grade repair and maintenance service ensures that your vehicles remain in top condition, minimizing downtime and maximizing productivity.",
+          // }
         ]}
       />
       <CoreSection
@@ -58,10 +56,10 @@ const Home = () => {
             title: "Vente de vélos",
             text : "Envie d'un nouveau vélo? Retrouvez ici nos vélos neufs et d'occasions."
           },
-          {
-            title: "Vente de vélos",
-            text : "Envie d'un nouveau vélo? Retrouvez ici nos vélos neufs et d'occasions."
-          }
+          // {
+          //   title: "Vente de vélos",
+          //   text : "Envie d'un nouveau vélo? Retrouvez ici nos vélos neufs et d'occasions."
+          // }
         ]}
       />
       <CoreSection
@@ -77,10 +75,10 @@ const Home = () => {
             title: "Électrification",
             text : "Transformation de votre vélo en VAE avec la marque ANNAD."
           },
-          {
-            title: "Électrification",
-            text : "Transformation de votre vélo en VAE avec la marque ANNAD."
-          }
+          // {
+          //   title: "Électrification",
+          //   text : "Transformation de votre vélo en VAE avec la marque ANNAD."
+          // }
         ]}
       />
 

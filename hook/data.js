@@ -7,67 +7,29 @@ const AllData = () => {
   return {
     data: [
       {
-        text: "Amortisseurs",
+        text: "VAE Urban Comfort",
         body: "Retrouvez ici toutes les prestations concernant l'entretien de vos amortisseurs.",
-        price: "2000 €",
+        price: "2199 €",
         productImg: one,
         className : "spe"
       },
       {
-        text: "Amortisseurs",
+        text: "VAE E-Travel",
         body: "Retrouvez ici toutes les prestations concernant l'entretien de vos amortisseurs.",
-        price: "2000 €",
+        price: "1499 €",
         productImg: two,
         className : "spe"
 
       },
       {
-        text: "Amortisseurs",
+        text: "VTT Carbon C20",
         body: "Retrouvez ici toutes les prestations concernant l'entretien de vos amortisseurs.",
-        price: "2000 €",
+        price: "1299 €",
         productImg: three,
         className : "spe"
 
       },
-      {
-        text: "Amortisseurs",
-        body: "Retrouvez ici toutes les prestations concernant l'entretien de vos amortisseurs.",
-        price: "2000 €",
-        productImg: one,
-        className : "spe"
-      },
-      {
-        text: "Amortisseurs",
-        body: "Retrouvez ici toutes les prestations concernant l'entretien de vos amortisseurs.",
-        price: "2000 €",
-        productImg: ownerTwo,
-        className : "spe"
 
-      },
-      {
-        text: "Amortisseurs",
-        body: "Retrouvez ici toutes les prestations concernant l'entretien de vos amortisseurs.",
-        price: "2000 €",
-        productImg: ownerTwo,
-        className : "spe"
-
-      },
-      {
-        text: "Amortisseurs",
-        body: "Retrouvez ici toutes les prestations concernant l'entretien de vos amortisseurs.",
-        price: "2000 €",
-        productImg: ownerTwo,
-        className : "spe"
-
-      },
-      {
-        text: "Amortisseurs",
-        body: "Retrouvez ici toutes les prestations concernant l'entretien de vos amortisseurs.",
-        price: "2000 €",
-        productImg: ownerTwo,
-        className : "spe"
-
-      },
     ],
   };
 };

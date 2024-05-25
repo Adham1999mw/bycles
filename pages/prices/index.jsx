@@ -15,7 +15,7 @@ const Prices = () => {
         mxSIZE={50}
       />
 
-      <Grid spacing={2} container md={12}>
+      <Grid spacing={2} container  justifyContent={'center'} md={12}>
         {data.map((product) => {
           return (
             <Grid item md={3} xs={6}>
