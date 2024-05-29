@@ -1,22 +1,21 @@
 import Cookies from "js-cookie";
 import { enqueueSnackbar } from "notistack";
 import { useState } from "react";
-import UseValidationSchema  from "@/Utilites"
+import UseValidationSchema from "@/Utilites";
 
 const useContactHook = () => {
-  
   const { handleSubmit, control, errors } = UseValidationSchema({
-    fields: ["firstname", "email" , 'phone'],
+    fields: ["firstname", "email", "phone"],
   });
 
   const [data, setData] = useState();
   const [loading, setLoading] = useState(false);
 
   const onSubmit = async () => {
-    if (data &&  Cookies.get('hour')) {
-      setLoading(true)
+    if (data && Cookies.get("hour")) {
+      setLoading(true);
       const response = await fetch(
-        "https://formsubmit.co/ajax/adhamelmalawany@gmail.com",
+        "https://formsubmit.co/ajax/lateliercyclophil@gmail.com",
         {
           method: "POST",
           headers: {
@@ -25,25 +24,22 @@ const useContactHook = () => {
           body: JSON.stringify({
             name: data.name,
             email: data.email,
-            phone:data.phone,
-            Object : data?.objectInput,
+            phone: data.phone,
+            Object: data?.objectInput,
             description: data?.desc,
-            day: Cookies.get('day'),
-            month:Cookies.get('month'),
-            hour:Cookies.get('hour'),
-            minute:Cookies.get('minute')
+            day: Cookies.get("day"),
+            month: Cookies.get("month"),
+            hour: Cookies.get("hour"),
+            minute: Cookies.get("minute"),
           }),
         }
       );
 
       if (response.ok) {
-        setLoading(false)
+        setLoading(false);
         enqueueSnackbar("Form submitted successfully", { variant: "success" });
-        Cookies.remove('day'),
-        Cookies.remove('month'),
-        Cookies.remove('hour')
-        Cookies.remove('minute')
-        
+        Cookies.remove("day"), Cookies.remove("month"), Cookies.remove("hour");
+        Cookies.remove("minute");
       } else {
         enqueueSnackbar("Failed to submit form", { variant: "error" });
       }
@@ -53,8 +49,8 @@ const useContactHook = () => {
   };
 
   const onSubmitContact = async () => {
-    if (data ) {
-      setLoading(true)
+    if (data) {
+      setLoading(true);
       const response = await fetch(
         "https://formsubmit.co/ajax/adhamelmalawany@gmail.com",
         {
@@ -65,21 +61,20 @@ const useContactHook = () => {
           body: JSON.stringify({
             name: data.name,
             email: data.email,
-            phone:data.phone,
-            Object : data?.objectInput,
+            phone: data.phone,
+            Object: data?.objectInput,
             description: data?.desc,
           }),
         }
       );
 
       if (response.ok) {
-        setLoading(false)
+        setLoading(false);
         enqueueSnackbar("Form submitted successfully", { variant: "success" });
-        
       } else {
         enqueueSnackbar("Failed to submit form", { variant: "error" });
       }
-    } 
+    }
   };
 
   const onSubmitError = () => {
@@ -104,7 +99,7 @@ const useContactHook = () => {
     handleInputChange,
     setDataFun,
     loading,
-    onSubmitContact
+    onSubmitContact,
   };
 };
 

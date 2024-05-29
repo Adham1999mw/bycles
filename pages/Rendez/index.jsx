@@ -37,15 +37,13 @@ const Rendez = () => {
         body={
           "1-S'assurer de la disponibilité de l'atelier en nous contactant par email, par téléphone ou via le formulaire de contact ci-dessous. <br> 2-Remplir la fiche atelier et la joindre à vos colis suspensions. <br> 3-Envoyer le colis à l'adresse indiquée sur la fiche atelier."
         }
-        bgColor={"#a60f0c"}
+        bgColor={"#3565ab"}
         color={"white"}
         handleClick={() => window.open("/atelier.pdf", "_blank")}
         buttonTitle={"Fiche Atelier"}
         stylesCustom={{ textAlign: "start" }}
       />
-      <BaseSection
-        title={"Demande de Rendez vous"}
-      />
+      <BaseSection title={"Demande de Rendez vous"} />
       <form
         className={`${styles.LogIn_Form} ${styles.formContainer}`}
         onSubmit={handleSubmit(onSubmit, onSubmitError)}

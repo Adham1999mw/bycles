@@ -3,10 +3,19 @@ import CustomButton from "../BaseButton";
 import "animate.css/animate.min.css";
 import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
-import styles from './Coresection.module.scss'
+import styles from "./Coresection.module.scss";
 import Image from "next/image";
 
-const CoreSection = ({ title, data, image, buttonTitle, RD, id , handleClick , custom}) => {
+const CoreSection = ({
+  title,
+  data,
+  image,
+  buttonTitle,
+  RD,
+  id,
+  handleClick,
+  custom,
+}) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0,
@@ -26,11 +35,16 @@ const CoreSection = ({ title, data, image, buttonTitle, RD, id , handleClick , c
       justifyContent="space-between"
       alignItems="center"
       gap={4}
-      position={'relative'}
+      position={"relative"}
       className={styles.mra}
     >
-
-      <Grid className={`animate__animated animate__slideInUp ${custom ?  styles.custom : null}` } md={5} item>
+      <Grid
+        className={`animate__animated animate__slideInUp ${
+          custom ? styles.custom : null
+        }`}
+        md={5}
+        item
+      >
         <animated.div ref={ref} style={props}>
           <div className={`${styles.image_CONTAINER}`}>
             {/* <img width={"100%"} src={image} alt={title} /> */}
@@ -42,7 +56,11 @@ const CoreSection = ({ title, data, image, buttonTitle, RD, id , handleClick , c
       <Grid item md={6}>
         <Grid container direction="column" gap={3}>
           <Grid item>
-            <Typography className={styles.title}  variant="h3" style={{ fontWeight: "bold"}}>
+            <Typography
+              className={styles.title}
+              variant="h3"
+              style={{ fontWeight: "bold" }}
+            >
               {title}
             </Typography>
           </Grid>
@@ -51,7 +69,9 @@ const CoreSection = ({ title, data, image, buttonTitle, RD, id , handleClick , c
             <Grid item key={index} sx={{ marginTop: 1 }}>
               <Grid container direction="column" gap={2}>
                 <Grid item>
-                  <Typography fontSize={20} variant="p"  color={"#a60f0c"}>{ele.title}</Typography>
+                  <Typography fontSize={20} variant="p" color={"#3565ab"}>
+                    {ele.title}
+                  </Typography>
                 </Grid>
                 <Grid item>
                   <Typography variant="span">{ele.text}</Typography>

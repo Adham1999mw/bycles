@@ -54,7 +54,7 @@ const Footer = () => {
 
           <div className={styles.lineresponsive}></div>
           <Grid md={4} xs={12} item gap={1} container>
-            <Grid style={{textAlign:'start'}}>
+            <Grid style={{ textAlign: "start" }}>
               <Typography variant="span" component="div">
                 Tél. Portable : +33 (0)7 68 82 81 84
               </Typography>
@@ -68,8 +68,12 @@ const Footer = () => {
                 Email : lateliercyclophil@gmail.com
               </Typography>
 
-              <Typography style={{marginTop:'15px'}}  component="div" variant="span">
-                Adresse :  
+              <Typography
+                style={{ marginTop: "15px" }}
+                component="div"
+                variant="span"
+              >
+                Adresse :
               </Typography>
 
               <Typography component="div" variant="span">
@@ -86,7 +90,7 @@ const Footer = () => {
                   }}
                   text={"Conditions Générales de Vente"}
                   bgColor="white"
-                  color="#a60f0c"
+                  color="#3565ab"
                 />
               </Grid>
             </Grid>
@@ -104,7 +108,7 @@ const Footer = () => {
 
             <Grid item>
               <a
-                href="https://www.instagram.com/phildothis/?igsh=MWoza2huMjMzaTdpNA%3D%3D"
+                href="https://www.instagram.com/lateliercyclophil"
                 target="_blank"
               >
                 <Image src={insta} width={35} height={35} />

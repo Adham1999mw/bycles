@@ -3,13 +3,12 @@ import BaseSection from "@/components/common/BaseSection";
 import CoreSection from "@/components/common/CoreSection";
 import { Grid } from "@mui/material";
 import React from "react";
-import secThree from "@/assets/secThree.jpeg"
-import two from "@/assets/two.jpeg"
+import secThree from "@/assets/secThree.jpeg";
+import two from "@/assets/two.jpeg";
 import { useRouter } from "next/router";
-import ownerTwo from '@/assets/ownerTwo.jpg'
+import ownerTwo from "@/assets/ownerTwo.jpg";
 
 const Home = () => {
-
   const router = useRouter();
 
   return (
@@ -19,7 +18,7 @@ const Home = () => {
         body={
           "Votre mécanicien et vendeur de vélos multi-marques sur Chaumontel et Saint Pathus."
         }
-        color={'white'}
+        color={"white"}
         bgImg
         mxSIZE={50}
       />
@@ -27,10 +26,8 @@ const Home = () => {
       <CoreSection
         title={"Entretien / Réparation"}
         buttonTitle={"Nos Services"}
-        handleClick={() => router.push('./services')}
-        image={
-          ownerTwo
-        }
+        handleClick={() => router.push("./services")}
+        image={ownerTwo}
         data={[
           {
             title: "Entretien / Réparation",
@@ -46,15 +43,12 @@ const Home = () => {
         RD
         title={"Vente de vélos"}
         buttonTitle={"Nos Vélos"}
-        handleClick={() => router.push('./prices')}
-
-        image={
-          two
-        }
+        handleClick={() => router.push("./prices")}
+        image={two}
         data={[
           {
             title: "Vente de vélos",
-            text : "Envie d'un nouveau vélo? Retrouvez ici nos vélos neufs et d'occasions."
+            text: "Envie d'un nouveau vélo? Retrouvez ici nos vélos neufs et d'occasions.",
           },
           // {
           //   title: "Vente de vélos",
@@ -65,15 +59,12 @@ const Home = () => {
       <CoreSection
         title={"Électrification"}
         buttonTitle={"Contactez-nous"}
-        handleClick={() => router.push('./contact')}
-
-        image={
-          secThree
-        }
+        handleClick={() => router.push("./contact")}
+        image={secThree}
         data={[
           {
             title: "Électrification",
-            text : "Transformation de votre vélo en VAE avec la marque ANNAD."
+            text: "Transformation de votre vélo en VAE avec la marque ANNAD.",
           },
           // {
           //   title: "Électrification",
@@ -88,7 +79,7 @@ const Home = () => {
           "Optimize your LEV fleet with our sustainable solutions. Maintenance. Management. Consultancy."
         }
         buttonTitle={"Our services"}
-        bgColor={"#a60f0c"}
+        bgColor={"#3565ab"}
         color={"white"}
         mxSIZE={50}
       /> */}

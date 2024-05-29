@@ -1,15 +1,19 @@
 import { Button } from "@mui/material";
 import styles from "./button.module.scss";
 
-const CustomButton = ({ text, bgColor = "#a60f0c", color = "white" , onclick , type}) => {
-
+const CustomButton = ({
+  text,
+  bgColor = "#3565ab",
+  color = "white",
+  onclick,
+  type,
+}) => {
   const hanleClick = () => {
     if (onclick) {
-      onclick()
-
+      onclick();
     }
-  }
-  
+  };
+
   return (
     <Button
       onClick={hanleClick}
@@ -17,7 +21,7 @@ const CustomButton = ({ text, bgColor = "#a60f0c", color = "white" , onclick , t
       type={type}
       style={{ color: color, background: bgColor, borderColor: bgColor }}
       className={[
-        bgColor != "#a60f0c" ? styles.CustomButtonHover : "",
+        bgColor != "#3565ab" ? styles.CustomButtonHover : "",
         styles.CustomButton,
       ]}
     >

@@ -320,7 +320,7 @@ const Serve = () => {
         alignItems={"center"}
       >
         <Image src={back} width={40} height={40} />
-        <Typography color={"#a60f0c"} variant="h5">
+        <Typography color={"#3565ab"} variant="h5">
           Services
         </Typography>
       </Grid>

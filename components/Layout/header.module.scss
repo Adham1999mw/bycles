@@ -1,5 +1,5 @@
 .headerContainer {
-  background-color: #a60f0c !important;
+  background-color: #3565ab !important;
   position: sticky;
   z-index: 5555;
   top: 0;
@@ -39,7 +39,7 @@
     .notActive {
       width: 1px;
       height: 2px;
-      background-color: #a60f0c;
+      background-color: #3565ab;
       border-radius: 50px;
     }
 
@@ -54,7 +54,7 @@
 }
 
 .desktopHeader {
-  background-color: #a60f0c;
+  background-color: #3565ab;
   display: flex;
   @media screen and (max-width: 768px) {
     display: none;

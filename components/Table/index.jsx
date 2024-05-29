@@ -3,11 +3,11 @@ import styles from "./Table.module.scss";
 import CustomButton from "@/components/common/BaseButton";
 import { useRouter } from "next/router";
 
-const TableSercies = ({ data, title, bottomData, lastDiv , bgColor }) => {
+const TableSercies = ({ data, title, bottomData, lastDiv, bgColor }) => {
   const router = useRouter();
 
   return (
-    <Grid  className={styles.Table} style={{background:bgColor}}>
+    <Grid className={styles.Table} style={{ background: bgColor }}>
       {title && (
         <Grid
           container
@@ -58,7 +58,7 @@ const TableSercies = ({ data, title, bottomData, lastDiv , bgColor }) => {
         <CustomButton
           onclick={() => router.push("/Rendez")}
           bgColor="white"
-          color="#a60f0c"
+          color="#3565ab"
           text={"Rendez-vous"}
         />
       </Grid>

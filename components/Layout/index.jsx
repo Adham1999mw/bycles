@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Container, Grid, Typography } from "@mui/material";
 import Link from "next/link";
 import bikelOGO from "@/assets/logo.png";
@@ -28,7 +28,18 @@ const Header = () => {
     setPathes(updatedPathes);
   };
 
-  const router = useRouter()
+  const router = useRouter();
+
+  useEffect(() => {
+    const updatedPathes = pathes.map((link, i) => {
+      if (router.route == link.link) {
+        return { ...link, active: true };
+      } else {
+        return { ...link, active: false };
+      }
+    });
+    setPathes(updatedPathes);
+  }, [router]);
 
   return (
     <Grid className={styles.headerContainer}>
@@ -38,10 +49,14 @@ const Header = () => {
           justifyContent="space-between"
           alignItems="center"
           className={styles.desktopHeader}
-          direction='row'
+          direction="row"
         >
           <Grid item className={styles.Imglogo_container}>
-            <Image onClick={() => router.push('/')} className={styles.Imglogo}  src={bikelOGO} />
+            <Image
+              onClick={() => router.push("/")}
+              className={styles.Imglogo}
+              src={bikelOGO}
+            />
           </Grid>
           <Grid item>
             <Grid
@@ -70,14 +85,18 @@ const Header = () => {
               ))}
             </Grid>
           </Grid>
-          <CustomButton onclick={() => router.push('/contact')}  bgColor="white" color="#a60f0c" text={"Contactez Nous"} />
+          <CustomButton
+            onclick={() => router.push("/contact")}
+            bgColor="white"
+            color="#3565ab"
+            text={"Contactez Nous"}
+          />
         </Grid>
 
         <HeaderDrawer data={pathes} />
       </Container>
     </Grid>
   );
-
 };
 
 export default Header;

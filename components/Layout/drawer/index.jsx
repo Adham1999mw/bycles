@@ -11,7 +11,7 @@ import { useRouter } from "next/router";
 
 function HeaderDrawer({ data }) {
   const [open, setOpen] = useState(false);
-  const router = useRouter()
+  const router = useRouter();
 
   const toggleDrawer = () => {
     setOpen(!open);
@@ -22,12 +22,20 @@ function HeaderDrawer({ data }) {
   return (
     <div className={styles.Drawer}>
       <div className={styles.Drawer_header}>
-        <Image onClick={() => router.push('/')}  className={styles.logo} src={bike} />
+        <Image
+          onClick={() => router.push("/")}
+          className={styles.logo}
+          src={bike}
+        />
         <Image onClick={toggleDrawer} src={BurgerMenu} width={40} height={40} />
       </div>
       <Drawer anchor="bottom" open={open} onClose={toggleDrawer}>
         <div className={styles.Drawer_content} style={{ width: "100%" }}>
-            <Image  onClick={() => router.push('/')} className={styles.logo} src={bike} />
+          <Image
+            onClick={() => router.push("/")}
+            className={styles.logo}
+            src={bike}
+          />
 
           {data.map((link, index) => (
             <Link
@@ -48,12 +56,11 @@ function HeaderDrawer({ data }) {
 
           <CustomButton
             onclick={() => {
-              router.push("./contact")
+              router.push("./contact");
               setOpen(false);
-
             }}
             bgColor="white"
-            color="#a60f0c"
+            color="#3565ab"
             text={"Contactez Nous"}
           />
         </div>

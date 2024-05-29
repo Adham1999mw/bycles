@@ -1,19 +1,15 @@
 import BaseSection from "@/components/common/BaseSection";
-import CoreSection from "@/components/common/CoreSection";
-import one from "@/assets/one.jpeg";
 import { Grid, Typography } from "@mui/material";
 import { useState } from "react";
 import styles from "./services.module.scss";
 import { useRouter } from "next/router";
-import TableSercies from "@/components/Table";
 import BaseCard from "@/components/common/BaseCard";
-import ownerTwo from '@/assets/ownerTwo.jpg'
-import servOne from "@/assets/servone.jpeg"
-import sevrThree from "@/assets/sevrThree.png"
-import servTwo from "@/assets/servTwo.jpeg"
+import force from "@/assets/force.jpeg";
+import servOne from "@/assets/servone.jpeg";
+import sevrThree from "@/assets/sevrThree.png";
+import servTwo from "@/assets/servTwo.jpeg";
 
 const Services = () => {
-  const [active, setActive] = useState("first");
   const router = useRouter();
   return (
     <>
@@ -75,7 +71,7 @@ const Services = () => {
         <Grid item xs={6} md={3}>
           <BaseCard
             handleClick={() => router.push("/services/forfaits")}
-            body  ={
+            body={
               "Retrouvez ici les tarifs des différents forfaits d'entretien de votre vélo."
             }
             title={"Forfaits"}
@@ -91,7 +87,6 @@ const Services = () => {
             }
             title={"Détails des Prestations"}
             productImg={servTwo}
-
           />
         </Grid>
         <Grid item xs={6} md={3}>
@@ -102,7 +97,6 @@ const Services = () => {
             }
             title={"Amortisseur"}
             productImg={sevrThree}
-
           />
         </Grid>
         <Grid item xs={6} md={3}>
@@ -112,8 +106,7 @@ const Services = () => {
               "Retrouvez ici toutes les prestations concernant l'entretien de votre fourche."
             }
             title={"Fourche"}
-            productImg={ownerTwo}
-
+            productImg={force}
           />
         </Grid>
       </Grid>
