@@ -8,21 +8,21 @@ const AllData = () => {
     data: [
       {
         text: "VAE Urban Comfort",
-        body: "",
+        body: "BERTIN",
         price: "2199 €",
         productImg: one,
         className: "spe",
       },
       {
         text: "VAE E-Travel",
-        body: "",
+        body: "BERTIN",
         price: "1499 €",
         productImg: two,
         className: "spe",
       },
       {
         text: "VTT Carbon C20",
-        body: "",
+        body: "BERTIN",
         price: "1299 €",
         productImg: three,
         className: "spe",

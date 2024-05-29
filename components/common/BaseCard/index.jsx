@@ -3,6 +3,7 @@ import styles from "./BaseCard.module.scss";
 import Image from "next/image";
 import one from "../../../assets/one.jpeg";
 import CustomButton from "../BaseButton";
+import { useEffect } from "react";
 
 const BaseCard = ({
   title,
@@ -11,7 +12,11 @@ const BaseCard = ({
   price,
   productImg,
   className,
+  custom,
 }) => {
+  useEffect(() => {
+    console.log(custom, "test test test");
+  }, []);
   return (
     <Grid
       item
@@ -38,7 +43,7 @@ const BaseCard = ({
         className={styles.pad}
       >
         {body && (
-          <Grid className={styles.bodyCsu}>
+          <Grid className={custom ? null : `${styles.bodyCsu}`}>
             <Typography variant="p">{body}</Typography>
           </Grid>
         )}
