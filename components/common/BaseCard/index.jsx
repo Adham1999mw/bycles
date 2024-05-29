@@ -14,9 +14,6 @@ const BaseCard = ({
   className,
   custom,
 }) => {
-  useEffect(() => {
-    console.log(custom, "test test test");
-  }, []);
   return (
     <Grid
       item
