@@ -1,9 +1,7 @@
 import { Grid, Typography } from "@mui/material";
 import styles from "./BaseCard.module.scss";
 import Image from "next/image";
-import one from "../../../assets/one.jpeg";
 import CustomButton from "../BaseButton";
-import { useEffect } from "react";
 
 const BaseCard = ({
   title,
