@@ -14,26 +14,23 @@ const useContactHook = () => {
   const onSubmit = async () => {
     if (data && Cookies.get("hour")) {
       setLoading(true);
-      const response = await fetch(
-        "https://formsubmit.co/ajax/lateliercyclophil@gmail.com",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name: data.name,
-            email: data.email,
-            phone: data.phone,
-            Object: data?.objectInput,
-            description: data?.desc,
-            day: Cookies.get("day"),
-            month: Cookies.get("month"),
-            hour: Cookies.get("hour"),
-            minute: Cookies.get("minute"),
-          }),
-        }
-      );
+      const response = await fetch("https://formspree.io/f/xbjnener", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          Object: data?.objectInput,
+          description: data?.desc,
+          day: Cookies.get("day"),
+          month: Cookies.get("month"),
+          hour: Cookies.get("hour"),
+          minute: Cookies.get("minute"),
+        }),
+      });
 
       if (response.ok) {
         setLoading(false);
@@ -51,22 +48,19 @@ const useContactHook = () => {
   const onSubmitContact = async () => {
     if (data) {
       setLoading(true);
-      const response = await fetch(
-        "https://formsubmit.co/ajax/adhamelmalawany@gmail.com",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name: data.name,
-            email: data.email,
-            phone: data.phone,
-            Object: data?.objectInput,
-            description: data?.desc,
-          }),
-        }
-      );
+      const response = await fetch("https://formspree.io/f/xbjnener", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          Object: data?.objectInput,
+          description: data?.desc,
+        }),
+      });
 
       if (response.ok) {
         setLoading(false);
