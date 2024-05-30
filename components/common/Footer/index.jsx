@@ -27,7 +27,7 @@ const Footer = () => {
         >
           <Grid md={4} xs={12} item>
             <Typography component="div" variant="span">
-              Lundi : 10h00 - 18h00 ( À Saint-Pathus){" "}
+              Lundi : 10h00 - 18h00 ( À Saint-Pathus)
             </Typography>
             <Typography component="div" variant="span">
               Mardi : 9h30 - 18h30
@@ -42,7 +42,8 @@ const Footer = () => {
               Vendredi : 9h30 - 18h30
             </Typography>
             <Typography component="div" variant="span">
-              Samedi : 9h30 - 12h30
+              Samedi : 9h30 - 12h30 (À Chaumontel) <br /> 14h00 - 18h00 (À
+              Saint-Pathus)
             </Typography>
             <Typography component="div" variant="span">
               Dimanche : Fermé
@@ -56,7 +57,7 @@ const Footer = () => {
           <Grid md={4} xs={12} item gap={1} container>
             <Grid style={{ textAlign: "start" }}>
               <Typography variant="span" component="div">
-                Tél. Portable : +33 (0)7 68 82 81 84
+                Tél. Portable : 07 68 82 81 84
               </Typography>
               <Typography component="div" variant="span">
                 Atelier Chaumontel : 01 34 68 52 13
